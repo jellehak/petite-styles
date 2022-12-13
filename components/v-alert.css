@@ -1,0 +1,22 @@
+/*
+  <v-alert type="warning" outlined shaped>Broken</v-alert>
+  <v-alert type="warning" shaped>Broken</v-alert>
+  */
+v-alert {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 16px;
+    padding: 16px;
+    transition: 0.3s cubic-bezier(0.25, 0.8, 0.5, 1);
+    color: white;
+    background: currentColor;
+}
+
+v-alert[outlined] {
+    background: transparent !important;
+    border: thin solid currentColor;
+}
+
+v-alert[shaped] {
+    border-radius: 24px 4px;
+}

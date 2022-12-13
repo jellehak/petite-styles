@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
+  <script type="importmap">
+      {
+        "imports": {
+        }
+      }
+    </script>
+
+  <title>V-UI</title>
+  <style>
+    @import url(../style.css);
+    @import url(https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css);
+    /* @import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0); */
+    /* @import url(https://fonts.googleapis.com/css?family=Material+Icons); */
+
+    v-sheet {
+      display: flex;
+      min-height: 200px;
+      max-height: 200px;
+      background-color: #fafafa;
+    }
+
+    .v-theme--dark v-sheet {
+      background-color: #1e1e1e;
+    }
+
+    .preview {
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app" class="v-theme--dark">
+    <main>
+
+      <section>
+        <h2>Icons</h2>
+        <v-sheet class="preview">
+          <div class="flex-fill">
+
+            <section>
+              <span class="mdi mdi-home"></span>
+              <span class="mdi mdi-loading mdi-spin">Processing</span>
+              <span class="mdi mdi-bookmark" aria-hidden> Bookmark Item
+                <!-- 
+          Before:
+          <v-icon icon="mdi-vuetify" size="large"></v-icon>
+          Renders:
+          <i class="mdi-vuetify mdi v-icon notranslate v-theme--dark v-icon--size-large" aria-hidden="true"></i> -->
+
+                <v-icon class="mdi mdi-vuetify" size="x-small"></v-icon>
+                <v-icon class="mdi mdi-vuetify" size="small"></v-icon>
+                <v-icon class="mdi mdi-vuetify" size="default"></v-icon>
+                <v-icon class="mdi mdi-vuetify" size="large"></v-icon>
+                <v-icon class="mdi mdi-vuetify" size="x-large"></v-icon>
+            </section>
+
+            <section>
+              <v-icon class="mdi mdi-vuetify" color="green"></v-icon>
+              <v-icon class="mdi mdi-vuetify" color="red"></v-icon>
+              <v-icon class="mdi mdi-vuetify" color="blue"></v-icon>
+            </section>
+            <!-- <v-icon>mdi-access-point</v-icon>
+      <i class="v-icon notranslate mdi mdi-minus"></i> -->
+          </div>
+        </v-sheet>
+      </section>
+
+      <section>
+        <h2>Toolbar</h2>
+        <v-sheet class="preview">
+          <div class="flex-fill">
+            <v-toolbar>
+              <div class="v-toolbar__content" style="height: 64px;"><button type="button"
+                  class="v-app-bar__nav-icon v-btn v-btn--icon v-btn--round theme--dark v-size--default"><span
+                    class="v-btn__content"><span aria-hidden="true" class="v-icon notranslate theme--dark"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"
+                        class="v-icon__svg">
+                        <path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"></path>
+                      </svg></span></span></button></div>
+            </v-toolbar>
+          </div>
+        </v-sheet>
+      </section>
+
+      <section>
+        <h1>Card</h1>
+        <v-card loading variant="tonal" v-for="item in items" class="my-2">
+          <v-card-title>Title</v-card-title>
+          <v-card-text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque, sint tempore molestias mollitia ipsum
+            aperiam temporibus odit tempora, labore et quo, repudiandae asperiores quia eos iste rerum fugit rem?
+          </v-card-text>
+          <v-card-actions>
+            <button variant="" @click="app.call(item.id)">Call</button>
+            <button variant="text" @click="app.contacts.service(item._id, {method: 'DELETE'})">Remove</button>
+          </v-card-actions>
+          <v-card__underlay></v-card__underlay>
+        </v-card>
+      </section>
+
+      <section>
+        <h2>Chips</h2>
+        <v-sheet class="preview">
+          <div class="flex-fill">
+
+            <section>
+              <h3>Variants</h3>
+              <v-chip close variant="tonal">
+                <span class="v-chip__underlay"></span>
+                default
+              </v-chip>
+  
+              <v-chip variant="outlined">
+                <span class="v-chip__underlay"></span>
+                outlined
+              </v-chip>
+  
+              <v-chip variant="elevated">
+                <span class="v-chip__underlay"></span>
+                elevated
+              </v-chip>
+  
+              <v-chip variant="text">
+                <span class="v-chip__underlay"></span>
+                text
+              </v-chip>
+  
+              <v-chip variant="plain">
+                <span class="v-chip__underlay"></span>
+                plain
+              </v-chip>
+            </section>
+
+            <section>
+              <h3>Colors</h3>
+              <v-chip close variant="default" color="orange">
+                <span class="v-chip__underlay"></span>
+                Chip
+              </v-chip>
+            </section>
+          </div>
+        </v-sheet>
+      </section>
+    </main>
+  </div>
+
+  <script type="module">
+
+  </script>
+</body>
+
+</html>

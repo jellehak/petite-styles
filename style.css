@@ -1,0 +1,65 @@
+/* @import url(https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css); */
+@import url(./components/index.css);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&amp;display=swap);
+
+/* Global selectors */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* Prevent adjustments of font size after orientation changes in iOS */
+  word-break: normal;
+  tab-size: 4;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+} */
+
+/* Flow content 
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Content_categories#flow_content
+*/
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
