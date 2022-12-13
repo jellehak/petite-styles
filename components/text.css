@@ -1,215 +1,215 @@
 .text-left {
-    text-align: left !important;
+    text-align: left;
 }
 
 .text-right {
-    text-align: right !important;
+    text-align: right;
 }
 
 .text-center {
-    text-align: center !important;
+    text-align: center;
 }
 
 .text-justify {
-    text-align: justify !important;
+    text-align: justify;
 }
 
 .text-start {
-    text-align: start !important;
+    text-align: start;
 }
 
 .text-end {
-    text-align: end !important;
+    text-align: end;
 }
 
 .text-decoration-line-through {
-    text-decoration: line-through !important;
+    text-decoration: line-through;
 }
 
 .text-decoration-none {
-    text-decoration: none !important;
+    text-decoration: none;
 }
 
 .text-decoration-overline {
-    text-decoration: overline !important;
+    text-decoration: overline;
 }
 
 .text-decoration-underline {
-    text-decoration: underline !important;
+    text-decoration: underline;
 }
 
 .text-wrap {
-    white-space: normal !important;
+    white-space: normal;
 }
 
 .text-no-wrap {
-    white-space: nowrap !important;
+    white-space: nowrap;
 }
 
 .text-pre {
-    white-space: pre !important;
+    white-space: pre;
 }
 
 .text-pre-line {
-    white-space: pre-line !important;
+    white-space: pre-line;
 }
 
 .text-pre-wrap {
-    white-space: pre-wrap !important;
+    white-space: pre-wrap;
 }
 
 .text-break {
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
+    overflow-wrap: break-word;
+    word-break: break-word;
 }
 
 .text-high-emphasis {
-    color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity)) !important;
+    color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
 }
 
 .text-medium-emphasis {
-    color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity)) !important;
+    color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity));
 }
 
 .text-disabled {
-    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity)) !important;
+    color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
 }
 
 .text-truncate {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .text-h1 {
-    font-size: 6rem !important;
+    font-size: 6rem;
     font-weight: 300;
     line-height: 6rem;
-    letter-spacing: -0.015625em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: -0.015625em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-h2 {
-    font-size: 3.75rem !important;
+    font-size: 3.75rem;
     font-weight: 300;
     line-height: 3.75rem;
-    letter-spacing: -0.0083333333em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: -0.0083333333em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-h3 {
-    font-size: 3rem !important;
+    font-size: 3rem;
     font-weight: 400;
     line-height: 3.125rem;
-    letter-spacing: normal !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: normal;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-h4 {
-    font-size: 2.125rem !important;
+    font-size: 2.125rem;
     font-weight: 400;
     line-height: 2.5rem;
-    letter-spacing: 0.0073529412em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.0073529412em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-h5 {
-    font-size: 1.5rem !important;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 2rem;
-    letter-spacing: normal !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: normal;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-h6 {
-    font-size: 1.25rem !important;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 2rem;
-    letter-spacing: 0.0125em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.0125em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-subtitle-1 {
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-weight: normal;
     line-height: 1.75rem;
-    letter-spacing: 0.009375em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.009375em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-subtitle-2 {
-    font-size: 0.875rem !important;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.375rem;
-    letter-spacing: 0.0071428571em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.0071428571em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-body-1 {
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
-    letter-spacing: 0.03125em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.03125em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-body-2 {
-    font-size: 0.875rem !important;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
-    letter-spacing: 0.0178571429em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.0178571429em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-button {
-    font-size: 0.875rem !important;
+    font-size: 0.875rem;
     font-weight: 500;
     line-height: 2.25rem;
-    letter-spacing: 0.0892857143em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: uppercase !important;
+    letter-spacing: 0.0892857143em;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
 }
 
 .text-caption {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.25rem;
-    letter-spacing: 0.0333333333em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: none !important;
+    letter-spacing: 0.0333333333em;
+    font-family: "Roboto", sans-serif;
+    text-transform: none;
 }
 
 .text-overline {
-    font-size: 0.75rem !important;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 2rem;
-    letter-spacing: 0.1666666667em !important;
-    font-family: "Roboto", sans-serif !important;
-    text-transform: uppercase !important;
+    letter-spacing: 0.1666666667em;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
 }
 
 .text-none {
-    text-transform: none !important;
+    text-transform: none;
 }
 
 .text-capitalize {
-    text-transform: capitalize !important;
+    text-transform: capitalize;
 }
 
 .text-lowercase {
-    text-transform: lowercase !important;
+    text-transform: lowercase;
 }
 
 .text-uppercase {
-    text-transform: uppercase !important;
+    text-transform: uppercase;
 }
