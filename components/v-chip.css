@@ -1,3 +1,4 @@
+/* https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css */
 v-chip {
     align-items: center;
     cursor: default;
@@ -27,49 +28,6 @@ v-chip[size=x-small] .v-avatar {
     --v-avatar-height: 14px;
 }
 
-.v-chip--pill.v-chip[size=x-small] .v-avatar {
-    --v-avatar-height: 20px;
-}
-
-v-chip[size=x-small] .v-chip__filter,
-v-chip[size=x-small] .v-chip__prepend,
-v-chip[size=x-small]>.v-avatar--start,
-v-chip[size=x-small]>.v-icon--start {
-    margin-inline-end: 4px;
-}
-
-v-chip[size=x-small] .v-chip__filter,
-v-chip[size=x-small] .v-chip__prepend,
-v-chip[size=x-small] .v-icon--start {
-    margin-inline-start: -4px;
-}
-
-v-chip[size=x-small] .v-avatar--start {
-    margin-inline-start: -5.6px;
-}
-
-.v-chip--pill.v-chip[size=x-small] .v-avatar--start {
-    margin-inline-start: -8px;
-}
-
-v-chip[size=x-small] .v-chip__append,
-v-chip[size=x-small] .v-chip__close,
-v-chip[size=x-small]>.v-avatar--end,
-v-chip[size=x-small]>.v-icon--end {
-    margin-inline-start: 4px;
-    margin-inline-end: -4px;
-}
-
-.v-chip--pill.v-chip[size=x-small] .v-avatar--end,
-.v-chip--pill.v-chip[size=x-small] .v-icon--end {
-    margin-inline-end: -8px;
-}
-
-.v-chip--pill.v-chip[size=x-small] .v-avatar--end+.v-chip__close,
-.v-chip--pill.v-chip[size=x-small] .v-icon--end+.v-chip__close {
-    margin-inline-start: 8px;
-}
-
 v-chip[size=small] {
     --v-chip-size: 0.75rem;
     --v-chip-height: 26px;
@@ -81,50 +39,7 @@ v-chip[size=small] .v-avatar {
     --v-avatar-height: 20px;
 }
 
-.v-chip--pill.v-chip[size=small] .v-avatar {
-    --v-avatar-height: 26px;
-}
-
-v-chip[size=small] .v-chip__filter,
-v-chip[size=small] .v-chip__prepend,
-v-chip[size=small]>.v-avatar--start,
-v-chip[size=small]>.v-icon--start {
-    margin-inline-end: 5px;
-}
-
-v-chip[size=small] .v-chip__filter,
-v-chip[size=small] .v-chip__prepend,
-v-chip[size=small] .v-icon--start {
-    margin-inline-start: -5px;
-}
-
-v-chip[size=small] .v-avatar--start {
-    margin-inline-start: -7px;
-}
-
-.v-chip--pill.v-chip[size=small] .v-avatar--start {
-    margin-inline-start: -10px;
-}
-
-v-chip[size=small] .v-chip__append,
-v-chip[size=small] .v-chip__close,
-v-chip[size=small]>.v-avatar--end,
-v-chip[size=small]>.v-icon--end {
-    margin-inline-start: 5px;
-    margin-inline-end: -5px;
-}
-
-.v-chip--pill.v-chip[size=small] .v-avatar--end,
-.v-chip--pill.v-chip[size=small] .v-icon--end {
-    margin-inline-end: -10px;
-}
-
-.v-chip--pill.v-chip[size=small] .v-avatar--end+.v-chip__close,
-.v-chip--pill.v-chip[size=small] .v-icon--end+.v-chip__close {
-    margin-inline-start: 10px;
-}
-
-v-chip[size=default] {
+v-chip, v-chip[size=default] {
     --v-chip-size: 0.875rem;
     --v-chip-height: 32px;
     font-size: 0.875rem;
@@ -133,49 +48,6 @@ v-chip[size=default] {
 
 v-chip[size=default] .v-avatar {
     --v-avatar-height: 26px;
-}
-
-.v-chip--pill.v-chip[size=default] .v-avatar {
-    --v-avatar-height: 32px;
-}
-
-v-chip[size=default] .v-chip__filter,
-v-chip[size=default] .v-chip__prepend,
-v-chip[size=default]>.v-avatar--start,
-v-chip[size=default]>.v-icon--start {
-    margin-inline-end: 6px;
-}
-
-v-chip[size=default] .v-chip__filter,
-v-chip[size=default] .v-chip__prepend,
-v-chip[size=default] .v-icon--start {
-    margin-inline-start: -6px;
-}
-
-v-chip[size=default] .v-avatar--start {
-    margin-inline-start: -8.4px;
-}
-
-.v-chip--pill.v-chip[size=default] .v-avatar--start {
-    margin-inline-start: -12px;
-}
-
-v-chip[size=default] .v-chip__append,
-v-chip[size=default] .v-chip__close,
-v-chip[size=default]>.v-avatar--end,
-v-chip[size=default]>.v-icon--end {
-    margin-inline-start: 6px;
-    margin-inline-end: -6px;
-}
-
-.v-chip--pill.v-chip[size=default] .v-avatar--end,
-.v-chip--pill.v-chip[size=default] .v-icon--end {
-    margin-inline-end: -12px;
-}
-
-.v-chip--pill.v-chip[size=default] .v-avatar--end+.v-chip__close,
-.v-chip--pill.v-chip[size=default] .v-icon--end+.v-chip__close {
-    margin-inline-start: 12px;
 }
 
 v-chip[size=large] {
@@ -189,49 +61,6 @@ v-chip[size=large] .v-avatar {
     --v-avatar-height: 32px;
 }
 
-.v-chip--pill.v-chip[size=large] .v-avatar {
-    --v-avatar-height: 38px;
-}
-
-v-chip[size=large] .v-chip__filter,
-v-chip[size=large] .v-chip__prepend,
-v-chip[size=large]>.v-avatar--start,
-v-chip[size=large]>.v-icon--start {
-    margin-inline-end: 7px;
-}
-
-v-chip[size=large] .v-chip__filter,
-v-chip[size=large] .v-chip__prepend,
-v-chip[size=large] .v-icon--start {
-    margin-inline-start: -7px;
-}
-
-v-chip[size=large] .v-avatar--start {
-    margin-inline-start: -9.8px;
-}
-
-.v-chip--pill.v-chip[size=large] .v-avatar--start {
-    margin-inline-start: -14px;
-}
-
-v-chip[size=large] .v-chip__append,
-v-chip[size=large] .v-chip__close,
-v-chip[size=large]>.v-avatar--end,
-v-chip[size=large]>.v-icon--end {
-    margin-inline-start: 7px;
-    margin-inline-end: -7px;
-}
-
-.v-chip--pill.v-chip[size=large] .v-avatar--end,
-.v-chip--pill.v-chip[size=large] .v-icon--end {
-    margin-inline-end: -14px;
-}
-
-.v-chip--pill.v-chip[size=large] .v-avatar--end+.v-chip__close,
-.v-chip--pill.v-chip[size=large] .v-icon--end+.v-chip__close {
-    margin-inline-start: 14px;
-}
-
 v-chip[size=x-large] {
     --v-chip-size: 1.125rem;
     --v-chip-height: 44px;
@@ -241,49 +70,6 @@ v-chip[size=x-large] {
 
 v-chip[size=x-large] .v-avatar {
     --v-avatar-height: 38px;
-}
-
-.v-chip--pill.v-chip[size=x-large] .v-avatar {
-    --v-avatar-height: 44px;
-}
-
-v-chip[size=x-large] .v-chip__filter,
-v-chip[size=x-large] .v-chip__prepend,
-v-chip[size=x-large]>.v-avatar--start,
-v-chip[size=x-large]>.v-icon--start {
-    margin-inline-end: 8.5px;
-}
-
-v-chip[size=x-large] .v-chip__filter,
-v-chip[size=x-large] .v-chip__prepend,
-v-chip[size=x-large] .v-icon--start {
-    margin-inline-start: -8.5px;
-}
-
-v-chip[size=x-large] .v-avatar--start {
-    margin-inline-start: -11.9px;
-}
-
-.v-chip--pill.v-chip[size=x-large] .v-avatar--start {
-    margin-inline-start: -17px;
-}
-
-v-chip[size=x-large] .v-chip__append,
-v-chip[size=x-large] .v-chip__close,
-v-chip[size=x-large]>.v-avatar--end,
-v-chip[size=x-large]>.v-icon--end {
-    margin-inline-start: 8.5px;
-    margin-inline-end: -8.5px;
-}
-
-.v-chip--pill.v-chip[size=x-large] .v-avatar--end,
-.v-chip--pill.v-chip[size=x-large] .v-icon--end {
-    margin-inline-end: -17px;
-}
-
-.v-chip--pill.v-chip[size=x-large] .v-avatar--end+.v-chip__close,
-.v-chip--pill.v-chip[size=x-large] .v-icon--end+.v-chip__close {
-    margin-inline-start: 17px;
 }
 
 v-chip, v-chip[density=default] {
@@ -335,6 +121,8 @@ v-chip[density=compact] {
     }
 }
 
+/* Variants */
+v-chip,
 v-chip[variant=plain],
 v-chip[variant=outlined],
 v-chip[variant=text],
@@ -378,6 +166,8 @@ v-chip[variant=text] .v-chip__overlay {
     background: currentColor;
 }
 
+/* Default */
+v-chip .v-chip__underlay,
 v-chip[variant=tonal] .v-chip__underlay {
     background: currentColor;
     opacity: var(--v-activated-opacity);
@@ -394,17 +184,13 @@ v-chip[variant=tonal] .v-chip__underlay {
     border-width: thin;
 }
 
-.v-chip--link {
+v-chip[link] {
     cursor: pointer;
 }
 
 .v-chip--filter {
     -webkit-user-select: none;
     user-select: none;
-}
-
-.v-chip--label {
-    border-radius: 4px;
 }
 
 .v-chip__filter,
@@ -446,17 +232,18 @@ v-chip[variant=tonal] .v-chip__underlay {
     transition: opacity 0.2s ease-in-out;
 }
 
-.v-chip--disabled {
+v-chip[disabled] {
     opacity: 0.3;
     pointer-events: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-.v-chip--label {
+v-chip[label] {
     border-radius: 4px;
 }
 
+/* group */
 .v-chip-group {
     display: flex;
     max-width: 100%;
@@ -478,7 +265,74 @@ v-chip[variant=tonal] .v-chip__underlay {
     white-space: normal;
 }
 
-.v-color-picker {
-    align-self: flex-start;
-    contain: content;
+/* pill: Remove v-avatar padding */
+.v-chip--pill.v-chip[size=x-small] .v-avatar {
+    --v-avatar-height: 20px;
+}
+.v-chip--pill.v-chip[size=x-small] .v-avatar--end,
+.v-chip--pill.v-chip[size=x-small] .v-icon--end {
+    margin-inline-end: -8px;
+}
+
+.v-chip--pill.v-chip[size=x-small] .v-avatar--end+.v-chip__close,
+.v-chip--pill.v-chip[size=x-small] .v-icon--end+.v-chip__close {
+    margin-inline-start: 8px;
+}
+.v-chip--pill.v-chip[size=small] .v-avatar {
+    --v-avatar-height: 26px;
+}
+.v-chip--pill.v-chip[size=small] .v-avatar--end,
+.v-chip--pill.v-chip[size=small] .v-icon--end {
+    margin-inline-end: -10px;
+}
+
+.v-chip--pill.v-chip[size=small] .v-avatar--end+.v-chip__close,
+.v-chip--pill.v-chip[size=small] .v-icon--end+.v-chip__close {
+    margin-inline-start: 10px;
+}
+.v-chip--pill.v-chip[size=default] .v-avatar {
+    --v-avatar-height: 32px;
+}
+.v-chip--pill.v-chip[size=default] .v-avatar--start {
+    margin-inline-start: -12px;
+}
+
+.v-chip--pill.v-chip[size=default] .v-avatar--end,
+.v-chip--pill.v-chip[size=default] .v-icon--end {
+    margin-inline-end: -12px;
+}
+
+.v-chip--pill.v-chip[size=default] .v-avatar--end+.v-chip__close,
+.v-chip--pill.v-chip[size=default] .v-icon--end+.v-chip__close {
+    margin-inline-start: 12px;
+}
+.v-chip--pill.v-chip[size=large] .v-avatar {
+    --v-avatar-height: 38px;
+}
+.v-chip--pill.v-chip[size=large] .v-avatar--start {
+    margin-inline-start: -14px;
+}
+.v-chip--pill.v-chip[size=large] .v-avatar--end,
+.v-chip--pill.v-chip[size=large] .v-icon--end {
+    margin-inline-end: -14px;
+}
+
+.v-chip--pill.v-chip[size=large] .v-avatar--end+.v-chip__close,
+.v-chip--pill.v-chip[size=large] .v-icon--end+.v-chip__close {
+    margin-inline-start: 14px;
+}
+.v-chip--pill.v-chip[size=x-large] .v-avatar {
+    --v-avatar-height: 44px;
+}
+.v-chip--pill.v-chip[size=x-large] .v-avatar--start {
+    margin-inline-start: -17px;
+}
+.v-chip--pill.v-chip[size=x-large] .v-avatar--end,
+.v-chip--pill.v-chip[size=x-large] .v-icon--end {
+    margin-inline-end: -17px;
+}
+
+.v-chip--pill.v-chip[size=x-large] .v-avatar--end+.v-chip__close,
+.v-chip--pill.v-chip[size=x-large] .v-icon--end+.v-chip__close {
+    margin-inline-start: 17px;
 }
