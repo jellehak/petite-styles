@@ -53,3 +53,13 @@ class VBtn extends HTMLElement {
 }
 
 customElements.define('v-btn', VBtn);
+
+class VSheet extends HTMLElement {
+    connectedCallback() {
+        const el = document.createElement('div')
+        el.classList.add('v-chip__underlay')
+        this.prepend(el)
+    }
+}
+
+customElements.define('v-sheet', VSheet);

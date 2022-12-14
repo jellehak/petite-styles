@@ -25,6 +25,10 @@
       background-color: #1e1e1e;
     }
 
+    .v-theme--light v-preview {
+      background-color: #bababa;
+    }
+
     v-preview {
       align-items: center;
       justify-content: center;
@@ -126,14 +130,15 @@
           Sheet
         </h1>
         <p>The <code class="v-code">v-sheet</code> component is a transformable piece of <span
-            style="text-decoration:underline;">paper</span> that provides a basic foundation. For
-          example, properties such as <strong>rounded</strong> and <strong>shaped</strong> modify the <code
-            class="v-code">border-radius</code> property while <strong>elevation</strong> increase / decreases <code
-            class="v-code">box-shadow</code>.</p>
+            style="text-decoration:underline;">paper</span> that provides a basic foundation.</p>
 
         <v-preview>
-          <v-sheet></v-sheet>
-          <v-sheet rounded class="mx-auto" height="100" width="100"></v-sheet>
+          <div class="v-theme--light d-flex">
+            <v-sheet style="height:100px;width:100px"></v-sheet>
+            <v-sheet rounded style="height:100px;width:100px"></v-sheet>
+            <v-sheet rounded="l" style="height:100px;width:100px">L</v-sheet>
+            <v-sheet rounded="xl" style="height:100px;width:100px">XL</v-sheet>
+          </div>
         </v-preview>
       </section>
 

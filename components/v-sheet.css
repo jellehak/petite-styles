@@ -1,4 +1,5 @@
-.v-sheet {
+v-sheet {
+  --border-radius-step: 4px;
   display: block;
   border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   border-style: solid;
@@ -8,19 +9,29 @@
   background: rgb(var(--v-theme-surface));
   color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
 }
-.v-sheet--border {
+v-sheet[border] {
   border-width: thin;
   box-shadow: none;
 }
-.v-sheet--absolute {
+v-sheet[absolute] {
   position: absolute;
 }
-.v-sheet--fixed {
+v-sheet[fixed] {
   position: fixed;
 }
-.v-sheet--rounded {
-  border-radius: 4px;
-}.v-slide-group {
-  display: flex;
-  overflow: hidden;
+v-sheet[rounded] {
+  border-radius: calc(var(--border-radius-step) * 1);
+}
+
+v-sheet[rounded="s"] {
+  border-radius: calc(var(--border-radius-step) * 1);
+}
+v-sheet[rounded="m"] {
+  border-radius: calc(var(--border-radius-step) * 2);
+}
+v-sheet[rounded="l"] {
+  border-radius: calc(var(--border-radius-step) * 4);
+}
+v-sheet[rounded="xl"] {
+  border-radius: calc(var(--border-radius-step) * 6);
 }
