@@ -6,5 +6,7 @@
 @import url(./v-chip.css);
 @import url(./v-btn.css);
 @import url(./v-sheet.css);
+@import url(./v-img.css);
+@import url(./v-divider.css);
 
-/* @import url(./button.css); */
+@import url(./grid.css);

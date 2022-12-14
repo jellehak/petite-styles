@@ -95,7 +95,7 @@ v-btn[variant=outlined],
 v-btn[variant=text],
 v-btn[variant=tonal] {
   background: transparent;
-  color: inherit;
+  /* color: inherit; */
 }
 
 v-btn[variant=plain] {

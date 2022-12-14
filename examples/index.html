@@ -15,72 +15,13 @@
   <style>
     @import url(../style.css);
     @import url(https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css);
-
-    v-preview {
-      display: flex;
-      background-color: #fafafa;
-    }
-
-    .v-theme--dark v-preview {
-      background-color: #1e1e1e;
-    }
-
-    .v-theme--light v-preview {
-      background-color: #bababa;
-    }
-
-    v-preview {
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-      min-height: 200px;
-      padding: 20px;
-    }
-
-    main {
-      margin-top: 50px;
-      margin-bottom: 50px;
-    }
-
-    .v-heading>a {
-      bottom: 0;
-      display: inline-block;
-      left: 0;
-      margin: 0 -0.7em;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .v-heading>a:not(:hover):not(:focus) {
-      opacity: 0;
-    }
-
-
-    h1:hover a,
-    h2:hover a,
-    h3:hover a,
-    h4:hover a,
-    h5:hover a,
-    h6:hover a {
-      text-decoration: none;
-      visibility: visible;
-    }
-
-    h1 a,
-    h2 a,
-    h3 a,
-    h4 a,
-    h5 a,
-    h6 a {
-      vertical-align: middle;
-      visibility: hidden;
-    }
+    @import url(./style.css);
   </style>
 </head>
 
 <body>
-
+  <script src="https://unpkg.com/petite-vue" defer init></script>
+  
   <div id="app" class="v-theme--dark">
     <main>
 
@@ -153,35 +94,118 @@
               style="font-size: 0.875rem; height: 0.875rem; width: 0.875rem;"></i></a> that provides a simple interface
           for headings, text, images, icons, and more
         </p>
-        <v-preview>
-          <v-card variant="tonal" v-for="item in items" class="my-2">
-            <v-card-title>Title</v-card-title>
-            <v-card-text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque, sint tempore molestias mollitia
-              ipsum
-              aperiam temporibus odit tempora, labore et quo, repudiandae asperiores quia eos iste rerum fugit rem?
-            </v-card-text>
-            <v-card-actions>
-              <v-btn variant="">Call</v-btn>
-              <v-btn variant="text">Remove</v-btn>
-            </v-card-actions>
-            <v-card__underlay></v-card__underlay>
-          </v-card>
 
-          <v-card variant="tonal" v-for="item in items" class="my-2">
-            <v-card-title>Title</v-card-title>
+        <v-preview>
+          <!-- 'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain' -->
+          <v-card>
             <v-card-text>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque, sint tempore molestias mollitia
-              ipsum
-              aperiam temporibus odit tempora, labore et quo, repudiandae asperiores quia eos iste rerum fugit rem?
+              <my-lorem></my-lorem>
             </v-card-text>
-            <v-card-actions>
-              <v-btn variant="">Call</v-btn>
-              <v-btn variant="text">Remove</v-btn>
-            </v-card-actions>
-            <v-card__underlay></v-card__underlay>
+          </v-card>
+          <v-card variant="outlined">
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+          </v-card>
+          <v-card variant="tonal">
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
           </v-card>
         </v-preview>
+
+        <section id="v-card-density">
+          <h4>
+            <a aria-hidden="true" href="#v-card-density">#</a>
+            density
+          </h4>
+          <v-preview>
+            <v-card>
+              <v-card-title>default</v-card-title>
+              <v-card-text>
+                <my-lorem></my-lorem>
+              </v-card-text>
+            </v-card>
+            <v-card density="comfortable">
+              <v-card-title>comfortable</v-card-title>
+              <v-card-text>
+                <my-lorem></my-lorem>
+              </v-card-text>
+            </v-card>
+            <v-card density="compact">
+              <v-card-title>compact</v-card-title>
+              <v-card-text>
+                <my-lorem></my-lorem>
+              </v-card-text>
+            </v-card>
+          </v-preview>
+        </section>
+
+        <v-preview>
+          <v-card variant="tonal" class="my-2">
+            <v-card-title>Title</v-card-title>
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn variant="">Call</v-btn>
+              <v-btn variant="text">Remove</v-btn>
+            </v-card-actions>
+          </v-card>
+
+          <v-card variant="tonal" class="my-2">
+            <v-card-title>Title</v-card-title>
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+            <v-card-actions>
+              <v-btn variant="">Call</v-btn>
+              <v-btn variant="text">Remove</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-preview>
+
+        <section>
+          <v-preview v-scope="{ show: 0 }">
+            <v-card class="mx-auto" style="width:344px">
+              <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px" cover></v-img>
+  
+              <v-card-title>
+                Top western road trips
+              </v-card-title>
+  
+              <v-card-subtitle>
+                1,000 miles of wonder
+              </v-card-subtitle>
+  
+              <v-card-actions>
+                <v-btn color="orange-lighten-2" variant="text">
+                  Explore
+                </v-btn>
+  
+                <v-spacer></v-spacer>
+  
+                <v-btn variant="text" @click="show = !show">
+                  <v-icon :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"></v-icon>
+                </v-btn>
+              </v-card-actions>
+  
+              <v-expand-transition>
+                <div v-show="show">
+                  <v-divider></v-divider>
+  
+                  <v-card-text>
+                    I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time
+                    for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file!
+                    Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find
+                    a way to escape.
+                  </v-card-text>
+                </div>
+              </v-expand-transition>
+            </v-card>
+          </v-preview>
+        </section>
+
       </section>
 
       <section id="chips">
@@ -347,6 +371,15 @@
 
     // Extra components
     customElements.define('v-preview', class extends HTMLElement { });
+
+
+    customElements.define('my-lorem', class extends HTMLElement {
+      connectedCallback() {
+        this.innerText = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa cumque, sint tempore molestias mollitia
+              ipsum
+              aperiam temporibus odit tempora, labore et quo, repudiandae asperiores quia eos iste rerum fugit rem?`
+      }
+    });
   </script>
 </body>
 

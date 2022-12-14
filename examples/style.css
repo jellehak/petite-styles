@@ -1,0 +1,60 @@
+v-preview {
+    display: flex;
+    background-color: #fafafa;
+}
+
+.v-theme--dark v-preview {
+    background-color: #1e1e1e;
+}
+
+.v-theme--light v-preview {
+    background-color: #bababa;
+}
+
+v-preview {
+    /* align-items: center; */
+    justify-content: center;
+    margin: 10px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.v-heading>a {
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+    margin: 0 -0.7em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.v-heading>a:not(:hover):not(:focus) {
+    opacity: 0;
+}
+
+
+h1:hover a,
+h2:hover a,
+h3:hover a,
+h4:hover a,
+h5:hover a,
+h6:hover a {
+    text-decoration: none;
+    visibility: visible;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+    vertical-align: middle;
+    visibility: hidden;
+}

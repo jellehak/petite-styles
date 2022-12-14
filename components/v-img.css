@@ -1,17 +1,17 @@
-.v-img {
+v-img {
     --v-theme-overlay-multiplier: 3;
     z-index: 0;
 }
 
-.v-img--booting .v-responsive__sizer {
+v-img--booting .v-responsive__sizer {
     transition: none;
 }
 
-.v-img__img,
-.v-img__picture,
-.v-img__gradient,
-.v-img__placeholder,
-.v-img__error {
+v-img img,
+v-img__picture,
+v-img__gradient,
+v-img__placeholder,
+v-img__error {
     z-index: -1;
     position: absolute;
     top: 0;
@@ -20,18 +20,18 @@
     height: 100%;
 }
 
-.v-img__img--preload {
+v-img[preload] img {
     filter: blur(4px);
 }
 
-.v-img__img--contain {
+v-img[contain] img {
     object-fit: contain;
 }
 
-.v-img__img--cover {
+v-img[cover] img {
     object-fit: cover;
 }
 
-.v-img__gradient {
+v-img__gradient {
     background-repeat: no-repeat;
 }
