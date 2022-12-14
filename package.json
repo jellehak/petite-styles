@@ -4,9 +4,15 @@
   "description": "A lightweight UI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx postcss style.css -o dist/style.css -u postcss-import --no-map"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "postcss": "^8.4.20",
+    "postcss-import": "^15.1.0"
+  }
 }

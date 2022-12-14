@@ -8,7 +8,14 @@
     flex: 1 1 auto;
 }
 
+
 /* Margin */
+
+.mx-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .mx-0 {
     margin-right: 0px;
     margin-left: 0px;

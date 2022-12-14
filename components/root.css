@@ -1,5 +1,12 @@
 :root {
     color-scheme: dark;
+
+    --v-theme-background: #fff;
+    --v-theme-on-background: #000;
+    --v-theme-surface: #fff;
+    --v-theme-on-surface: #000;
+    --v-theme-overlay-multiplier: 1;
+    --v-scrollbar-offset: 0px;
 }
 
 .v-theme--light {

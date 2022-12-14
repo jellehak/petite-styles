@@ -1,6 +1,10 @@
 free, light and open-source CSS framework.
 
-Instead of relying on classes style are applied on webcomponents.
+with very little javascript.
+
+Features: 
+- Fast response very little javascript overhead 
+- Developer friendly. Instead of relying on classes webcomponents and attributes are used as selectors.
 
 # Usage
 ```html
@@ -19,7 +23,6 @@ Instead of relying on classes style are applied on webcomponents.
         <button variant="">Click me</button>
         <button variant="text">Click me</button>
     </v-card-actions>
-    <v-card__underlay></v-card__underlay>
 </v-card>
 ```
 
