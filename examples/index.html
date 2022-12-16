@@ -4,367 +4,497 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover" />
-  <script type="importmap">
-      {
-        "imports": {
-        }
-      }
-    </script>
 
-  <title>V-UI</title>
+  <title>Petite-UI</title>
   <style>
     @import url(../style.css);
     @import url(https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css);
     @import url(./style.css);
+
+    section {
+      margin-left: 20px;
+    }
   </style>
+  <script src="https://unpkg.com/petite-vue" defer init></script>
 </head>
 
-<body>
-  <script src="https://unpkg.com/petite-vue" defer init></script>
-  
-  <div id="app" class="v-theme--dark">
-    <main>
+<body v-scope="{ collapse: false, dark: true }">
+  <v-toolbar position="fixed" color="deep-purple" style="top:0">
+    <v-btn variant="text" @click="collapse = !collapse">Toggle examples</v-btn>
+    <!-- <v-btn variant="text" @click="dark = !dark">Toggle dark/light</v-btn> -->
+    <button variant="text" @click="dark = !dark">
+      Toggle dark/light
+      <v-icon v-if="!dark">mdi-weather-sunny</v-icon>
+      <v-icon v-if="dark">mdi-weather-night</v-icon>
+    </button>
+  </v-toolbar>
 
-      <div class="text-center">
-        <h1 class="mx-auto">Web Component Framework</h1>
-        <p class="mx-auto" style="max-width: 568px;  font-size: 1.25rem;
-        font-weight: 300;">V-UI is a lightweight UI Framework based on Web Components.</p>
-      </div>
+  <main :class="dark ? 'v-theme--dark' : 'v-theme--light'">
+    <div class="text-center">
+      <h1 class="mx-auto">Web Component Framework</h1>
+      <p class="mx-auto" style="max-width: 568px;  font-size: 1.25rem;
+        font-weight: 300;">Petite-UI is a lightweight UI Framework based on handy selectors and a sprinkle of
+        JavaScript.</p>
+    </div>
 
-      <section>
-        <h2>Icons</h2>
-        <v-preview>
+    <section>
+      <h2>Switch</h2>
 
-          <section>
+      <article>
+        <v-preview v-show="!collapse" v-scope="{}">
+          <label>
+            Switch
+            <v-switch></v-switch>
+          </label>
+
+          <label>
+            <v-switch></v-switch>
+            Switch
+          </label>
+
+          <label>
+            <v-switch></v-switch>
+          </label>
+
+          <label>
+            <v-switch variant="round"></v-switch>
+          </label>
+
+          <label>
+            <v-switch variant="round" color="red"></v-switch>
+          </label>
+        </v-preview>
+      </article>
+    </section>
+
+
+    <section>
+      <h2>Toolbar</h2>
+
+      <article>
+        <v-preview v-show="!collapse" v-scope="{}">
+          <v-toolbar>
+            <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
+            <v-toolbar-title>Application</v-toolbar-title>
+          </v-toolbar>
+        </v-preview>
+
+        <v-preview v-show="!collapse" v-scope="{}">
+          <v-toolbar density="compact">
+            <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
+
+            <v-toolbar-title>Compact</v-toolbar-title>
+
+            <v-spacer></v-spacer>
+
+            <v-btn icon>
+              <v-icon>mdi-magnify</v-icon>
+            </v-btn>
+
+            <v-btn icon>
+              <v-icon>mdi-heart</v-icon>
+            </v-btn>
+
+            <v-btn icon>
+              <v-icon>mdi-dots-vertical</v-icon>
+            </v-btn>
+          </v-toolbar>
+        </v-preview>
+      </article>
+    </section>
+
+
+
+    <section>
+      <h2>Icons</h2>
+
+      <article>
+        <v-preview v-show="!collapse">
+
+          <v-sheet class="mx-2">
             <h2>Raw</h2>
             <span class="mdi mdi-home"></span>
             <span class="mdi mdi-loading mdi-spin">Processing</span>
             <span class="mdi mdi-bookmark" aria-hidden> Bookmark Item
               <!-- 
-          Before:
-          <v-icon icon="mdi-vuetify" size="large"></v-icon>
-          Renders:
-          <i class="mdi-vuetify mdi v-icon notranslate v-theme--dark v-icon--size-large" aria-hidden="true"></i> -->
-          </section>
+            Before:
+            <v-icon icon="mdi-vuetify" size="large"></v-icon>
+            Renders:
+            <i class="mdi-vuetify mdi v-icon notranslate v-theme--dark v-icon--size-large" aria-hidden="true"></i> -->
+          </v-sheet>
 
-          <section>
+          <v-sheet class="mx-2">
             <h2>Sizes</h2>
             <v-icon icon="mdi-vuetify" size="x-small"></v-icon>
             <v-icon icon="mdi-vuetify" size="small"></v-icon>
             <v-icon icon="mdi-vuetify" size="default"></v-icon>
             <v-icon icon="mdi-vuetify" size="large"></v-icon>
             <v-icon icon="mdi-vuetify" size="x-large"></v-icon>
-          </section>
+          </v-sheet>
 
-          <section id="colors">
+          <v-sheet class="mx-2">
             <h2>Colors</h2>
             <v-icon icon="mdi-vuetify" color="green"></v-icon>
             <v-icon icon="mdi-vuetify" color="red"></v-icon>
             <v-icon icon="mdi-vuetify" color="blue"></v-icon>
-          </section>
+          </v-sheet>
+        </v-preview>
+      </article>
+    </section>
+
+    <section id="v-sheet">
+      <h1>
+        <a aria-hidden="true" href="#v-sheet">#</a>
+        Sheet
+      </h1>
+      <p>The <code class="v-code">v-sheet</code> component is a transformable piece of <span
+          style="text-decoration:underline;">paper</span> that provides a basic foundation.</p>
+
+      <v-preview v-show="!collapse">
+        <div class="v-theme--light d-flex">
+          <v-sheet style="height:100px;width:100px"></v-sheet>
+          <v-sheet rounded style="height:100px;width:100px"></v-sheet>
+          <v-sheet rounded="l" style="height:100px;width:100px">L</v-sheet>
+          <v-sheet rounded="xl" style="height:100px;width:100px">XL</v-sheet>
+        </div>
+      </v-preview>
+    </section>
+
+    <section>
+      <h1>
+        <a aria-hidden="true" href="#v-card">#</a>
+        Cards
+      </h1>
+      <p>The <code class="v-code">v-card</code> component is a versatile an enhanced version of <a href="#v-sheet"
+          class="app-link text-decoration-none text-primary font-weight-medium d-inline-flex align-center"><!--v-if-->v-sheet<i
+            class="mdi-page-next mdi v-icon notranslate v-theme--dark text-primary ml-1" aria-hidden="true"
+            style="font-size: 0.875rem; height: 0.875rem; width: 0.875rem;"></i></a> that provides a simple interface
+        for headings, text, images, icons, and more
+      </p>
+
+      <v-preview v-show="!collapse" flex="row">
+        <!-- 'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain' -->
+        <v-card>
+          <v-card-text>
+            <my-lorem></my-lorem>
+          </v-card-text>
+        </v-card>
+        <v-card variant="outlined">
+          <v-card-text>
+            <my-lorem></my-lorem>
+          </v-card-text>
+        </v-card>
+        <v-card variant="tonal">
+          <v-card-text>
+            <my-lorem></my-lorem>
+          </v-card-text>
+        </v-card>
+      </v-preview>
+
+      <section id="v-card-density">
+        <h4>
+          <a aria-hidden="true" href="#v-card-density">#</a>
+          density
+        </h4>
+        <v-preview v-show="!collapse" flex="row">
+          <v-card>
+            <v-card-title>default</v-card-title>
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+          </v-card>
+          <v-card density="comfortable">
+            <v-card-title>comfortable</v-card-title>
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+          </v-card>
+          <v-card density="compact">
+            <v-card-title>compact</v-card-title>
+            <v-card-text>
+              <my-lorem></my-lorem>
+            </v-card-text>
+          </v-card>
         </v-preview>
       </section>
 
-      <section id="v-sheet">
-        <h1>
-          <a aria-hidden="true" href="#v-sheet">#</a>
-          Sheet
-        </h1>
-        <p>The <code class="v-code">v-sheet</code> component is a transformable piece of <span
-            style="text-decoration:underline;">paper</span> that provides a basic foundation.</p>
+      <v-preview v-show="!collapse" flex="row">
+        <v-card variant="tonal" class="my-2">
+          <v-card-title>Title</v-card-title>
+          <v-card-text>
+            <my-lorem></my-lorem>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn variant="">Call</v-btn>
+            <v-btn variant="text">Remove</v-btn>
+          </v-card-actions>
+        </v-card>
 
-        <v-preview>
-          <div class="v-theme--light d-flex">
-            <v-sheet style="height:100px;width:100px"></v-sheet>
-            <v-sheet rounded style="height:100px;width:100px"></v-sheet>
-            <v-sheet rounded="l" style="height:100px;width:100px">L</v-sheet>
-            <v-sheet rounded="xl" style="height:100px;width:100px">XL</v-sheet>
-          </div>
-        </v-preview>
-      </section>
+        <v-card variant="tonal" class="my-2">
+          <v-card-title>Title</v-card-title>
+          <v-card-text>
+            <my-lorem></my-lorem>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn variant="">Call</v-btn>
+            <v-btn variant="text">Remove</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-preview>
 
       <section>
-        <h1>
-          <a aria-hidden="true" href="#v-card">#</a>
-          Cards
-        </h1>
-        <p>The <code class="v-code">v-card</code> component is a versatile an enhanced version of <a href="#v-sheet"
-            class="app-link text-decoration-none text-primary font-weight-medium d-inline-flex align-center"><!--v-if-->v-sheet<i
-              class="mdi-page-next mdi v-icon notranslate v-theme--dark text-primary ml-1" aria-hidden="true"
-              style="font-size: 0.875rem; height: 0.875rem; width: 0.875rem;"></i></a> that provides a simple interface
-          for headings, text, images, icons, and more
-        </p>
+        <v-preview v-show="!collapse" v-scope="{ show: 0 }">
+          <v-card class="mx-auto" style="width:344px">
+            <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px" cover></v-img>
 
-        <v-preview>
-          <!-- 'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain' -->
-          <v-card>
-            <v-card-text>
-              <my-lorem></my-lorem>
-            </v-card-text>
-          </v-card>
-          <v-card variant="outlined">
-            <v-card-text>
-              <my-lorem></my-lorem>
-            </v-card-text>
-          </v-card>
-          <v-card variant="tonal">
-            <v-card-text>
-              <my-lorem></my-lorem>
-            </v-card-text>
+            <v-card-title>
+              Top western road trips
+            </v-card-title>
+
+            <v-card-subtitle>
+              1,000 miles of wonder
+            </v-card-subtitle>
+
+            <v-card-actions>
+              <v-btn color="orange-lighten-2" variant="text">
+                Explore
+              </v-btn>
+
+              <v-spacer></v-spacer>
+
+              <v-btn variant="text" @click="show = !show">
+                <v-icon :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"></v-icon>
+              </v-btn>
+            </v-card-actions>
+
+            <v-expand-transition>
+              <div v-show="show">
+                <v-divider></v-divider>
+
+                <v-card-text>
+                  I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time
+                  for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data
+                  file!
+                  Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to
+                  find
+                  a way to escape.
+                </v-card-text>
+              </div>
+            </v-expand-transition>
           </v-card>
         </v-preview>
+      </section>
 
-        <section id="v-card-density">
-          <h4>
-            <a aria-hidden="true" href="#v-card-density">#</a>
-            density
-          </h4>
-          <v-preview>
-            <v-card>
-              <v-card-title>default</v-card-title>
-              <v-card-text>
-                <my-lorem></my-lorem>
-              </v-card-text>
-            </v-card>
-            <v-card density="comfortable">
-              <v-card-title>comfortable</v-card-title>
-              <v-card-text>
-                <my-lorem></my-lorem>
-              </v-card-text>
-            </v-card>
-            <v-card density="compact">
-              <v-card-title>compact</v-card-title>
-              <v-card-text>
-                <my-lorem></my-lorem>
-              </v-card-text>
-            </v-card>
-          </v-preview>
+    </section>
+
+    <section id="chips">
+      <h2>
+        <a aria-current="page" href="/en/components/chips/#label" aria-hidden="true" style="user-select: none;"><span
+            class="text-primary">#</span></a>
+        Chips
+      </h2>
+
+      <v-preview v-show="!collapse">
+
+        <section id="variants">
+          <h3>Variants</h3>
+          <v-chip close variant="tonal">
+            default
+          </v-chip>
+
+          <v-chip variant="outlined">
+            outlined
+          </v-chip>
+
+          <v-chip variant="elevated">
+            elevated
+          </v-chip>
+
+          <v-chip variant="text">
+            text
+          </v-chip>
+
+          <v-chip variant="plain">
+            plain
+          </v-chip>
         </section>
-
-        <v-preview>
-          <v-card variant="tonal" class="my-2">
-            <v-card-title>Title</v-card-title>
-            <v-card-text>
-              <my-lorem></my-lorem>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn variant="">Call</v-btn>
-              <v-btn variant="text">Remove</v-btn>
-            </v-card-actions>
-          </v-card>
-
-          <v-card variant="tonal" class="my-2">
-            <v-card-title>Title</v-card-title>
-            <v-card-text>
-              <my-lorem></my-lorem>
-            </v-card-text>
-            <v-card-actions>
-              <v-btn variant="">Call</v-btn>
-              <v-btn variant="text">Remove</v-btn>
-            </v-card-actions>
-          </v-card>
-        </v-preview>
 
         <section>
-          <v-preview v-scope="{ show: 0 }">
-            <v-card class="mx-auto" style="width:344px">
-              <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px" cover></v-img>
-  
-              <v-card-title>
-                Top western road trips
-              </v-card-title>
-  
-              <v-card-subtitle>
-                1,000 miles of wonder
-              </v-card-subtitle>
-  
-              <v-card-actions>
-                <v-btn color="orange-lighten-2" variant="text">
-                  Explore
-                </v-btn>
-  
-                <v-spacer></v-spacer>
-  
-                <v-btn variant="text" @click="show = !show">
-                  <v-icon :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"></v-icon>
-                </v-btn>
-              </v-card-actions>
-  
-              <v-expand-transition>
-                <div v-show="show">
-                  <v-divider></v-divider>
-  
-                  <v-card-text>
-                    I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time
-                    for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file!
-                    Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find
-                    a way to escape.
-                  </v-card-text>
-                </div>
-              </v-expand-transition>
-            </v-card>
+          <h3>Colors</h3>
+          <v-chip close color="orange">
+            Chip
+          </v-chip>
+        </section>
+
+        <section>
+          <h3>Disabled</h3>
+          <v-chip disabled color="orange">
+            Chip
+          </v-chip>
+
+          <v-chip disabled variant="outlined" color="orange">
+            Chip
+          </v-chip>
+        </section>
+
+        <section>
+          <h3>Label</h3>
+          <p>Label chips use the <code class="v-code">v-card</code> border-radius.</p>
+
+          <v-preview v-show="!collapse">
+            <v-chip class="ma-2" label>
+              Label
+            </v-chip>
+
+            <v-chip class="ma-2" color="pink" label text-color="white">
+              <v-icon start icon="mdi-label"></v-icon>
+              Tags
+            </v-chip>
+
+            <v-chip class="ma-2" color="primary" label>
+              <v-icon start icon="mdi-account-circle-outline"></v-icon>
+              John Leider
+            </v-chip>
+
+            <v-chip class="ma-2" closable color="cyan" label>
+              <v-icon start icon="mdi-twitter"></v-icon>
+              New Tweets
+            </v-chip>
           </v-preview>
         </section>
 
-      </section>
+        <section>
+          <h3>Icons</h3>
+          <v-chip variant="tonal" color="orange">
+            <i class="mdi-vuetify mdi v-icon v-icon--start"></i>
+            Chip
+            <i class="mdi-vuetify mdi v-icon v-icon--start"></i>
+          </v-chip>
+        </section>
 
-      <section id="chips">
-        <h2>
-          <a aria-current="page" href="/en/components/chips/#label" aria-hidden="true" style="user-select: none;"><span
-              class="text-primary">#</span></a>
-          Chips
-        </h2>
-
-        <v-preview>
-
-          <section id="variants">
-            <h3>Variants</h3>
-            <v-chip close variant="tonal">
-              default
+        <section>
+          <h3>Outlined</h3>
+          <div class="text-center">
+            <v-chip class="ma-2" color="success" variant="outlined">
+              <v-icon start icon="mdi-server-plus"></v-icon>
+              Server Status
             </v-chip>
 
-            <v-chip variant="outlined">
-              outlined
+            <v-chip class="ma-2" color="primary" variant="outlined">
+              User Account
+              <v-icon end icon="mdi-account-outline"></v-icon>
             </v-chip>
-
-            <v-chip variant="elevated">
-              elevated
-            </v-chip>
-
-            <v-chip variant="text">
-              text
-            </v-chip>
-
-            <v-chip variant="plain">
-              plain
-            </v-chip>
-          </section>
-
-          <section>
-            <h3>Colors</h3>
-            <v-chip close color="orange">
-              Chip
-            </v-chip>
-          </section>
-
-          <section>
-            <h3>Disabled</h3>
-            <v-chip disabled color="orange">
-              Chip
-            </v-chip>
-
-            <v-chip disabled variant="outlined" color="orange">
-              Chip
-            </v-chip>
-          </section>
-
-          <section>
-            <h3>Label</h3>
-            <p>Label chips use the <code class="v-code">v-card</code> border-radius.</p>
-
-            <v-preview>
-              <v-chip class="ma-2" label>
-                Label
-              </v-chip>
-
-              <v-chip class="ma-2" color="pink" label text-color="white">
-                <v-icon start icon="mdi-label"></v-icon>
-                Tags
-              </v-chip>
-
-              <v-chip class="ma-2" color="primary" label>
-                <v-icon start icon="mdi-account-circle-outline"></v-icon>
-                John Leider
-              </v-chip>
-
-              <v-chip class="ma-2" closable color="cyan" label>
-                <v-icon start icon="mdi-twitter"></v-icon>
-                New Tweets
-              </v-chip>
-            </v-preview>
-          </section>
-
-          <section>
-            <h3>Icons</h3>
-            <v-chip variant="tonal" color="orange">
-              <i class="mdi-vuetify mdi v-icon v-icon--start"></i>
-              Chip
-              <i class="mdi-vuetify mdi v-icon v-icon--start"></i>
-            </v-chip>
-          </section>
-
-          <section>
-            <h3>Outlined</h3>
-            <div class="text-center">
-              <v-chip class="ma-2" color="success" variant="outlined">
-                <v-icon start icon="mdi-server-plus"></v-icon>
-                Server Status
-              </v-chip>
-
-              <v-chip class="ma-2" color="primary" variant="outlined">
-                User Account
-                <v-icon end icon="mdi-account-outline"></v-icon>
-              </v-chip>
-            </div>
-          </section>
-
-          <section id="sizes">
-            <h3>Sizes</h3>
-            <p><code class="v-code">v-chip</code> component can have various sizes from <code
-                class="v-code">x-small</code> to <code class="v-code">x-large</code>.</p>
-            <div class="text-center">
-              <v-chip class="ma-2" size="x-small">
-                x-small chip
-              </v-chip>
-
-              <v-chip class="ma-2" size="small">
-                small chip
-              </v-chip>
-
-              <v-chip class="ma-2">
-                Default
-              </v-chip>
-
-              <v-chip class="ma-2" size="large">
-                large chip
-              </v-chip>
-
-              <v-chip class="ma-2" size="x-large">
-                x-large chip
-              </v-chip>
-            </div>
-          </section>
-
-        </v-preview>
-      </section>
-
-      <section id="buttons">
-        <h2>Buttons</h2>
-        <p>The <code class="v-code">v-btn</code> component replaces the standard html button with a material design
-          theme and a multitude of options. Any color helper class can be used to alter the background or text color.
-        </p>
-
-        <h3>Variant</h3>
-        <v-preview>
-          <div class="d-flex justify-space-between">
-            <v-btn>elevates (default)</v-btn>
-            <v-btn variant="flat">flat</v-btn>
-            <v-btn variant="tonal">tonal</v-btn>
-            <v-btn variant="outlined">outlined</v-btn>
-            <v-btn variant="text">text</v-btn>
-            <v-btn variant="plain">plain</v-btn>
           </div>
-        </v-preview>
+        </section>
 
-        <h3>Block</h3>
-        <v-preview>
-          <v-btn block>
-            Block Button
-          </v-btn>
-        </v-preview>
-      </section>
-    </main>
-  </div>
+        <section id="sizes">
+          <h3>Sizes</h3>
+          <p><code class="v-code">v-chip</code> component can have various sizes from <code
+              class="v-code">x-small</code> to <code class="v-code">x-large</code>.</p>
+          <div class="text-center">
+            <v-chip class="ma-2" size="x-small">
+              x-small chip
+            </v-chip>
+
+            <v-chip class="ma-2" size="small">
+              small chip
+            </v-chip>
+
+            <v-chip class="ma-2">
+              Default
+            </v-chip>
+
+            <v-chip class="ma-2" size="large">
+              large chip
+            </v-chip>
+
+            <v-chip class="ma-2" size="x-large">
+              x-large chip
+            </v-chip>
+          </div>
+        </section>
+
+      </v-preview>
+    </section>
+
+    <section id="inputs">
+      <h2>inputs</h2>
+
+      <v-preview v-show="!collapse">
+        <v-field>
+          <label>Label</label>
+          <input type="search" />
+          <v-field-hint>v-hint</v-field-hint>
+        </v-field>
+
+        <!-- <input type="text"> -->
+        <!-- <input type="date"> -->
+      </v-preview>
+      </v-preview>
+
+      <h3>Variant</h3>
+      <v-preview v-show="!collapse">
+        <div class="d-flex justify-space-between">
+          <v-btn>elevates (default)</v-btn>
+          <v-btn variant="flat">flat</v-btn>
+          <v-btn variant="tonal">tonal</v-btn>
+          <v-btn variant="outlined">outlined</v-btn>
+          <v-btn variant="text">text</v-btn>
+          <v-btn variant="plain">plain</v-btn>
+        </div>
+      </v-preview>
+
+      <h3>Block</h3>
+      <v-preview v-show="!collapse">
+        <v-btn block>
+          Block Button
+        </v-btn>
+      </v-preview>
+    </section>
+
+    <section id="buttons">
+      <h2>Buttons</h2>
+      <p>The <code class="v-code">v-btn</code> component replaces the standard html button with a material design
+        theme and a multitude of options. Any color helper class can be used to alter the background or text color.
+      </p>
+
+      <v-preview v-show="!collapse">
+        <div class="d-flex justify-space-between">
+          <!-- <button>test</button> -->
+          <v-btn>elevates (default)</v-btn>
+          <v-btn variant="flat">flat</v-btn>
+          <v-btn variant="tonal">tonal</v-btn>
+          <v-btn variant="outlined">outlined</v-btn>
+          <v-btn variant="text">text</v-btn>
+          <v-btn variant="plain">plain</v-btn>
+        </div>
+      </v-preview>
+
+      <h3>Variant</h3>
+      <v-preview v-show="!collapse">
+        <div class="d-flex justify-space-between">
+          <v-btn>elevates (default)</v-btn>
+          <v-btn variant="flat">flat</v-btn>
+          <v-btn variant="tonal">tonal</v-btn>
+          <v-btn variant="outlined">outlined</v-btn>
+          <v-btn variant="text">text</v-btn>
+          <v-btn variant="plain">plain</v-btn>
+        </div>
+      </v-preview>
+
+      <h3>Block</h3>
+      <v-preview v-show="!collapse">
+        <v-btn block>
+          Block Button
+        </v-btn>
+      </v-preview>
+    </section>
+  </main>
+
+  <footer>
+    <p class="padded lucida white-t">PetiteUI © 2022 | Developed by <a href="http://www.YellowDigital.nl"
+        target="_blank" class="white link lemon-t-s">YellowDigital</a>.</p>
+  </footer>
 
   <script type="module">
     import "../components/index.js"

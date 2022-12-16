@@ -24,11 +24,11 @@
     <main class="v-theme--dark">
       <h1>Contacts</h1>
 
-      <v-card variant="tonal" v-for="item in items" class="my-2">
+      <v-card variant="outlined" v-for="item in items" class="my-2">
         <v-card-title>{{item.first_name}} {{item.last_name}}</v-card-title>
         <v-card-subtitle>{{item.id}}</v-card-subtitle>
         <v-card-text>
-          <img :src="item.avatar">
+          <img avatar :src="item.avatar">
         </v-card-text>
         <v-card-actions>
           <v-btn @click="">Remove</v-btn>

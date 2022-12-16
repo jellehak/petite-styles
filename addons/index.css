@@ -1,4 +1,19 @@
 @import url(./helpers.css);
 @import url(./text.css);
-@import url(./colors.css);
+@import url(./colors/vars.css);
+/* @import url(./colors/background.css); */
+@import url(./colors/semantic.css);
+/* @import url(./colors/text.css); */
 @import url(./elevation.css);
+@import url(./flex.css);
+@import url(./position.css);
+
+/* TODO */
+[avatar] {
+    border-radius: 50%;
+}
+
+[avatar] {
+    height: 48px;
+    width: 48px;
+}

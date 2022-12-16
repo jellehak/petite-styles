@@ -17,7 +17,10 @@ class VIcon extends HTMLElement {
         this.classList.add('mdi')
         this.classList.add('v-icon')
 
-        const icon = this.getAttribute('icon')
+        const icon = this.innerText.toLowerCase() || this.getAttribute('icon')
+        if (this.innerText) {
+            this.innerText = ''
+        }
         if (!icon) {
             console.warn('Missing icon', this)
             return
@@ -40,22 +43,23 @@ customElements.define('v-chip', VChip);
 
 class VBtn extends HTMLElement {
     connectedCallback() {
-        // {
-        //     const el = document.createElement('span')
-        //     el.classList.add('v-btn__content')
-        //     el.innerHTML = this.innerHTML
-        //     this.innerText = ''
-        //     this.append(el)
-        // }
+        const childs = [...this.childNodes]
+        const button = document.createElement('button')
+        this.append(button)
+        button.append(...childs)
+
+        if (this.getAttribute('icon') === "") {
+            this.setAttribute('variant', 'text')
+        }
         {
             const el = document.createElement('span')
             el.classList.add('v-btn__overlay')
-            this.prepend(el)
+            button.prepend(el)
         }
         {
             const el = document.createElement('span')
             el.classList.add('v-btn__underlay')
-            this.prepend(el)
+            button.prepend(el)
         }
 
     }
@@ -93,15 +97,29 @@ class VImg extends HTMLElement {
 
 customElements.define('v-img', VImg);
 
-class VExpandTransition extends HTMLElement {
+customElements.define('v-app-bar-nav-icon', class extends HTMLElement {
     connectedCallback() {
-
+        this.innerHTML = `<v-btn variant="text"><v-icon icon="mdi-menu"></v-icon></v-btn>`
     }
-    toggle() {
-        const el = this
-        el.classList.toggle('expanded')
-        el.classList.toggle('collapsed')
-    }
-}
+});
 
-customElements.define('v-expand-transition', VExpandTransition);
+customElements.define('v-field', class extends HTMLElement {
+    connectedCallback() { }
+});
+
+customElements.define('v-switch', class extends HTMLElement {
+    connectedCallback() {
+        {
+            const el = document.createElement('input')
+            el.setAttribute('type', 'checkbox')
+            this.append(el)
+        }
+        {
+            const el = document.createElement('span')
+            el.classList.add('slider')
+            this.append(el)
+        }
+        {/* <span class="slider round"></span> */ }
+    }
+});
+

@@ -1,0 +1,45 @@
+/* Button */
+/* button, [role=button] {
+  cursor: pointer;
+  color: inherit;
+}
+
+button[variant] {
+  align-items: center;
+  border-radius: 4px;
+  font-weight: 500;
+  justify-content: center;
+  letter-spacing: 0.0892857143em;
+  outline: none;
+  position: relative;
+  text-transform: uppercase;
+  transition-property: box-shadow, transform, opacity, background;
+  transition-duration: 0.28s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+  border-style: solid;
+  border-width: 0;
+}
+
+button[variant] {
+  --v-btn-size: 0.875rem;
+  --v-btn-height: 36px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  padding: 0 16px;
+}
+
+button[variant] {
+  height: calc(var(--v-btn-height) + 0px);
+}
+
+button[variant=text] {
+  background: transparent;
+}
+button[variant=outlined] {
+  border: thin solid currentColor;
+}
+
+button:hover>.v-btn__overlay {
+  opacity: calc(0.04 * var(--v-theme-overlay-multiplier));
+} */

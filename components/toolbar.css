@@ -1,0 +1,88 @@
+v-toolbar {
+    align-items: flex-start;
+    display: flex;
+    background: rgb(var(--v-theme-on-surface-variant));
+    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+}
+
+v-toolbar {
+    height: 64px;
+    flex-grow: 1;
+}
+
+v-toolbar[border] {
+    border-width: thin;
+    box-shadow: none;
+}
+
+v-toolbar[absolute] {
+    position: absolute;
+}
+
+v-toolbar[collapse] {
+    max-width: 112px;
+    overflow: hidden;
+}
+
+v-toolbar[collapse] v-toolbar-title {
+    display: none;
+}
+
+v-toolbar[flat] {
+    box-shadow: 0px 0px 0px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+}
+
+v-toolbar[floating] {
+    display: inline-flex;
+}
+
+v-toolbar[rounded] {
+    border-radius: 4px;
+}
+
+v-toolbar[position=fixed] {
+    z-index: 5;
+}
+
+v-toolbar {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto;
+    position: relative;
+    transition: inherit;
+    width: 100%;
+}
+
+v-toolbar__content>v-toolbar-title {
+    margin-inline-start: 16px;
+}
+
+v-toolbar[density=prominent] v-toolbar__content {
+    align-items: flex-start;
+}
+
+v-toolbar-title {
+    flex: 1 1;
+    font-size: 1.25rem;
+    min-width: 0;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    text-transform: none;
+}
+
+v-toolbar[density=prominent] v-toolbar-title {
+    align-self: flex-end;
+    padding-bottom: 6px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 2.25rem;
+    text-transform: none;
+}
+
+v-toolbar-items {
+    display: flex;
+    height: inherit;
+}

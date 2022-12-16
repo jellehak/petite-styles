@@ -65,50 +65,50 @@ v-card[aria-haspopup=menu][aria-expanded=true]:focus-visible>v-card__overlay {
     }
 }
 
-[variant=plain],
-[variant=outlined],
-[variant=text],
-[variant=tonal] {
+v-card[variant=plain],
+v-card[variant=outlined],
+v-card[variant=text],
+v-card[variant=tonal] {
     background: transparent;
     color: inherit;
 }
 
-[variant=plain] {
+v-card[variant=plain] {
     opacity: 0.62;
 }
 
-[variant=plain]:focus,
-[variant=plain]:hover {
+v-card[variant=plain]:focus,
+v-card[variant=plain]:hover {
     opacity: 1;
 }
 
-[variant=plain] v-card__overlay {
+v-card[variant=plain] v-card__overlay {
     display: none;
 }
 
-[variant=elevated],
-[variant=flat] {
+v-card[variant=elevated],
+v-card[variant=flat] {
     background: rgb(var(--v-theme-surface));
     color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
 }
 
-[variant=elevated] {
+v-card[variant=elevated] {
     box-shadow: 0px 2px 1px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 1px 1px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 3px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
 }
 
-[variant=flat] {
+v-card[variant=flat] {
     box-shadow: 0px 0px 0px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
 }
 
-[variant=outlined] {
+v-card[variant=outlined] {
     border: thin solid currentColor;
 }
 
-[variant=text] v-card__overlay {
+v-card[variant=text] v-card__overlay {
     background: currentColor;
 }
 
-[variant=tonal] .v-card__underlay {
+v-card[variant=tonal] .v-card__underlay {
     background: currentColor;
     opacity: var(--v-activated-opacity);
     border-radius: inherit;

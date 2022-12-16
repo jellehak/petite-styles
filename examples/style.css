@@ -1,21 +1,21 @@
-v-preview {
-    display: flex;
-    background-color: #fafafa;
-}
-
 .v-theme--dark v-preview {
     background-color: #1e1e1e;
+    color: #bababa;
 }
 
 .v-theme--light v-preview {
     background-color: #bababa;
+    color: #1e1e1e;
+
 }
 
 v-preview {
-    /* align-items: center; */
+    flex-direction: column;
+    display: flex;
+    background-color: #fafafa;
     justify-content: center;
     margin: 10px;
-    min-height: 200px;
+    min-height: 50px;
     padding: 20px;
 }
 
