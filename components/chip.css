@@ -85,39 +85,39 @@ v-chip[density=compact] {
 }
 
 .v-chip:hover>.v-chip__overlay {
-    opacity: calc(0.04 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.04 * var(--overlay-multiplier));
 }
 
 .v-chip:focus-visible>.v-chip__overlay {
-    opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.12 * var(--overlay-multiplier));
 }
 
 @supports not selector(:focus-visible) {
     .v-chip:focus>.v-chip__overlay {
-        opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+        opacity: calc(0.12 * var(--overlay-multiplier));
     }
 }
 
 .v-chip--active>.v-chip__overlay,
 .v-chip[aria-haspopup=menu][aria-expanded=true]>.v-chip__overlay {
-    opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.12 * var(--overlay-multiplier));
 }
 
 .v-chip--active:hover>.v-chip__overlay,
 .v-chip[aria-haspopup=menu][aria-expanded=true]:hover>.v-chip__overlay {
-    opacity: calc(0.16 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.16 * var(--overlay-multiplier));
 }
 
 .v-chip--active:focus-visible>.v-chip__overlay,
 .v-chip[aria-haspopup=menu][aria-expanded=true]:focus-visible>.v-chip__overlay {
-    opacity: calc(0.24 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.24 * var(--overlay-multiplier));
 }
 
 @supports not selector(:focus-visible) {
 
     .v-chip--active:focus>.v-chip__overlay,
     .v-chip[aria-haspopup=menu][aria-expanded=true]:focus>.v-chip__overlay {
-        opacity: calc(0.24 * var(--v-theme-overlay-multiplier));
+        opacity: calc(0.24 * var(--overlay-multiplier));
     }
 }
 
@@ -146,8 +146,8 @@ v-chip[variant=plain] .v-chip__overlay {
 
 v-chip[variant=elevated],
 v-chip[variant=flat] {
-    background: rgb(var(--v-theme-surface-variant));
-    color: rgb(var(--v-theme-on-surface-variant));
+    background: rgb(var(--surface-variant));
+    color: rgb(var(--on-surface-variant));
 }
 
 v-chip[variant=elevated] {

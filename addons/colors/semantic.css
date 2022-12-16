@@ -3,3 +3,8 @@
     background-color: #fb8c00;
     caret-color: #fb8c00;
 }
+
+[type='warning'] {
+    color: #fb8c00;
+    caret-color: #fb8c00;
+}

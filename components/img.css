@@ -1,5 +1,5 @@
 v-img {
-    --v-theme-overlay-multiplier: 3;
+    --overlay-multiplier: 3;
     z-index: 0;
 }
 

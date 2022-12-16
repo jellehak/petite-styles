@@ -1,8 +1,8 @@
 v-toolbar {
     align-items: flex-start;
     display: flex;
-    background: rgb(var(--v-theme-on-surface-variant));
-    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+    background: var(--color, rgb(var(--on-surface-variant)));
+    color: rgba(var(--on-surface), var(--v-high-emphasis-opacity));
 }
 
 v-toolbar {

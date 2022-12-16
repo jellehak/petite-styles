@@ -1,10 +1,11 @@
-/* Button */
-/* button, [role=button] {
-  cursor: pointer;
-  color: inherit;
+button {
+  /* --color: var(--v-background); */
+  --color: 33, 33, 33;
 }
 
-button[variant] {
+button[variant=""], button[variant] {
+  cursor: pointer;
+  display: flex;
   align-items: center;
   border-radius: 4px;
   font-weight: 500;
@@ -19,18 +20,9 @@ button[variant] {
   border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   border-style: solid;
   border-width: 0;
-}
-
-button[variant] {
-  --v-btn-size: 0.875rem;
-  --v-btn-height: 36px;
-  font-size: 0.875rem;
-  min-width: 64px;
-  padding: 0 16px;
-}
-
-button[variant] {
-  height: calc(var(--v-btn-height) + 0px);
+  background-color: blue;
+  background-color: rgba(var(--color), 0.6);
+  padding: calc(var(--size, 1) * 10px);
 }
 
 button[variant=text] {
@@ -40,6 +32,10 @@ button[variant=outlined] {
   border: thin solid currentColor;
 }
 
-button:hover>.v-btn__overlay {
-  opacity: calc(0.04 * var(--v-theme-overlay-multiplier));
-} */
+button[variant]:hover {
+  background-color: rgba(var(--color), 1);
+}
+
+button[block] {
+  width: 100%;
+}

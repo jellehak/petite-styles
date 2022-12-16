@@ -9,7 +9,6 @@ class VIcon extends HTMLElement {
         return ["icon"];
     }
     attributeChangedCallback(key = "", oldValue, newValue) {
-        console.log(key, newValue)
         this.classList.remove(oldValue)
         this.classList.add(newValue)
     }
@@ -41,31 +40,7 @@ class VChip extends HTMLElement {
 
 customElements.define('v-chip', VChip);
 
-class VBtn extends HTMLElement {
-    connectedCallback() {
-        const childs = [...this.childNodes]
-        const button = document.createElement('button')
-        this.append(button)
-        button.append(...childs)
 
-        if (this.getAttribute('icon') === "") {
-            this.setAttribute('variant', 'text')
-        }
-        {
-            const el = document.createElement('span')
-            el.classList.add('v-btn__overlay')
-            button.prepend(el)
-        }
-        {
-            const el = document.createElement('span')
-            el.classList.add('v-btn__underlay')
-            button.prepend(el)
-        }
-
-    }
-}
-
-customElements.define('v-btn', VBtn);
 
 class VSheet extends HTMLElement {
     connectedCallback() {

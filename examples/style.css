@@ -6,7 +6,6 @@
 .v-theme--light v-preview {
     background-color: #bababa;
     color: #1e1e1e;
-
 }
 
 v-preview {
@@ -57,4 +56,8 @@ h5 a,
 h6 a {
     vertical-align: middle;
     visibility: hidden;
+}
+
+section h2 {
+    text-transform: capitalize;
 }

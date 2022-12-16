@@ -29,39 +29,39 @@ v-card[fixed] {
 }
 
 v-card:hover>v-card__overlay {
-    opacity: calc(0.04 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.04 * var(--overlay-multiplier));
 }
 
 v-card:focus-visible>v-card__overlay {
-    opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.12 * var(--overlay-multiplier));
 }
 
 @supports not selector(:focus-visible) {
     v-card:focus>v-card__overlay {
-        opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+        opacity: calc(0.12 * var(--overlay-multiplier));
     }
 }
 
 v-card[active]>v-card__overlay,
 v-card[aria-haspopup=menu][aria-expanded=true]>v-card__overlay {
-    opacity: calc(0.12 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.12 * var(--overlay-multiplier));
 }
 
 v-card[active]:hover>v-card__overlay,
 v-card[aria-haspopup=menu][aria-expanded=true]:hover>v-card__overlay {
-    opacity: calc(0.16 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.16 * var(--overlay-multiplier));
 }
 
 v-card[active]:focus-visible>v-card__overlay,
 v-card[aria-haspopup=menu][aria-expanded=true]:focus-visible>v-card__overlay {
-    opacity: calc(0.24 * var(--v-theme-overlay-multiplier));
+    opacity: calc(0.24 * var(--overlay-multiplier));
 }
 
 @supports not selector(:focus-visible) {
 
     v-card[active]:focus>v-card__overlay,
     v-card[aria-haspopup=menu][aria-expanded=true]:focus>v-card__overlay {
-        opacity: calc(0.24 * var(--v-theme-overlay-multiplier));
+        opacity: calc(0.24 * var(--overlay-multiplier));
     }
 }
 
@@ -88,8 +88,8 @@ v-card[variant=plain] v-card__overlay {
 
 v-card[variant=elevated],
 v-card[variant=flat] {
-    background: rgb(var(--v-theme-surface));
-    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+    background: rgb(var(--surface));
+    color: rgba(var(--on-surface), var(--v-high-emphasis-opacity));
 }
 
 v-card[variant=elevated] {

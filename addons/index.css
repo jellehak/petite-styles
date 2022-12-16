@@ -1,9 +1,7 @@
-@import url(./helpers.css);
+@import url(./spacing.css);
 @import url(./text.css);
 @import url(./colors/vars.css);
-/* @import url(./colors/background.css); */
 @import url(./colors/semantic.css);
-/* @import url(./colors/text.css); */
 @import url(./elevation.css);
 @import url(./flex.css);
 @import url(./position.css);
@@ -16,4 +14,21 @@
 [avatar] {
     height: 48px;
     width: 48px;
+}
+
+/* T-shirt based size control */
+[size="s"] {
+    --size: 1;
+}
+
+[size="m"] {
+    --size: 2;
+}
+
+[size="l"] {
+    --size: 3;
+}
+
+[size="xl"] {
+    --size: 4;
 }
