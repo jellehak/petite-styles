@@ -3,12 +3,19 @@
   @import url(https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css);
   @import url(../examples/style.css);
 
-  section {
+  /* section {
     margin-left: 20px;
-  }
+  } */
 </style>
-      
-# Lightweight UI Framework
+<script type="module">
+import * as TYPES from "../types.js"
+import { createApp } from 'https://unpkg.com/petite-vue?module'
+createApp({
+  TYPES
+}).mount()
+</script>
+
+# Styler
 
 a lightweight UI Framework based on handy selectors and a sprinkle of JavaScript
 
@@ -43,9 +50,14 @@ Attribute based styling
 
 > NOTE as most attribute values are one word, the quotes are fine to be omitted.
 
+## Motivation
+We have been using Bootstrap, Vuetify (Vue) and to lesser extend MUI (React) for our projects. These are all great frameworks but not very suited for smaller projects or just a static webpages. After playing around with `Alpine` and `Petite-vue` we kind of missed an easy to use UI library. So we went under the hood and created a set of style rules that work with any framework.
+
 # Usage
-```
+```html
+<style>
 @import url(../style.css);
+</style>
 ```
 
 # Helpers
@@ -121,8 +133,19 @@ Attribute based styling
     </v-preview>
   </section>
 
-# Alert
-  <v-preview max="2/4">
+## Generators
+
+### Text
+  <article>
+    <v-preview v-scope="{}">
+      <my-lorem></my-lorem>
+    </v-preview>
+  </article>
+</section>
+
+# Components
+## Alert
+  <v-preview>
       <v-alert outlined>outlined</v-alert>
       <v-alert outlined shaped>outlined shaped</v-alert>
       <v-alert shaped>shaped</v-alert>
@@ -130,8 +153,8 @@ Attribute based styling
     </div>
   </v-preview>
 
-## Colors
-  <v-preview max="2/4">
+### Colors
+  <v-preview>
     <v-alert color="success" outlined>outlined</v-alert>
     <v-alert color="info" outlined shaped>outlined shaped</v-alert>
     <v-alert color="warning" shaped>shaped</v-alert>
@@ -139,16 +162,16 @@ Attribute based styling
   </v-preview>
 </section>
 
-# Toolbar
+## Toolbar
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <v-toolbar>
         <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
         <v-toolbar-title>Application</v-toolbar-title>
       </v-toolbar>
     </v-preview>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <v-toolbar density="compact" color=deep-purple>
         <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
         <v-toolbar-title>Compact</v-toolbar-title>
@@ -166,19 +189,10 @@ Attribute based styling
     </v-preview>
   </article>
 
-# Text generators
+## List
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{}">
-      <my-lorem></my-lorem>
-    </v-preview>
-  </article>
-</section>
-
-# List
-
-  <article>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <v-list nav>
         <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
         <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors"
@@ -189,10 +203,10 @@ Attribute based styling
   </article>
 </section>
 
-# Drawer
+## Drawer
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <v-navigation-drawer image="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg" permanent theme="dark">
         <div class="v-navigation-drawer__img"><img src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
             alt=""></div>
@@ -207,10 +221,10 @@ Attribute based styling
     </v-preview>
   </article>
 
-## Alignment
+### Alignment
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <v-navigation-drawer location="right" permanent theme="dark">
         <div class="v-navigation-drawer__img"><img src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
             alt=""></div>
@@ -225,27 +239,9 @@ Attribute based styling
     </v-preview>
   </article>
 
-## Temporary
+## Icons
 
-  <article>
-    <v-preview v-show="!collapse" v-scope="{drawer: false}">
-      <v-navigation-drawer__scrim @click="drawer = false" v-show="drawer"></v-navigation-drawer__scrim>
-      <v-navigation-drawer v-show="drawer" temporary permanent theme="dark">
-        Nav items
-      </v-navigation-drawer>
-      <v-main style="height: 250px">
-        <my-lorem></my-lorem>
-        <button @click="drawer = !drawer">Toggle</button>
-      </v-main>
-    </v-preview>
-  </article>
-</section>
-
-# Icons
-
-  <article>
-    <v-preview v-show="!collapse">
-
+    <v-preview>
       <v-sheet mx="2">
         <h2>Raw</h2>
         <span class="mdi mdi-home"></span>
@@ -292,7 +288,7 @@ Attribute based styling
   <p>The <code>v-sheet</code> component is a transformable piece of <span
       style="text-decoration:underline;">paper</span> that provides a basic foundation.</p>
 
-  <v-preview v-show="!collapse">
+  <v-preview>
     <div flex>
       <v-sheet color=deep-purple></v-sheet>
       <v-sheet rounded></v-sheet>
@@ -302,7 +298,7 @@ Attribute based styling
   </v-preview>
 
 border
-<v-preview v-show="!collapse">
+<v-preview>
 <div flex>
 <v-sheet border color=deep-purple></v-sheet>
 <v-sheet border rounded></v-sheet>
@@ -322,7 +318,7 @@ border
     for headings, text, images, icons, and more.
   </p>
 
-  <v-preview v-show="!collapse" flex="row">
+  <v-preview flex="row">
     <!-- 'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain' -->
     <v-card>
       <v-card-text>
@@ -347,7 +343,7 @@ border
   </v-preview>
 
   ### density
-  <v-preview v-show="!collapse" flex="row">
+  <v-preview flex="row">
     <v-card>
       <v-card-title>default</v-card-title>
       <v-card-text>
@@ -368,7 +364,7 @@ border
     </v-card>
   </v-preview>
 
-  <v-preview v-show="!collapse" flex="row">
+  <v-preview flex="row">
     <v-card variant="tonal" class="my-2">
       <v-card-title>Title</v-card-title>
       <v-card-text>
@@ -394,7 +390,7 @@ border
   </v-preview>
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{ show: 0 }">
+    <v-preview v-scope="{ show: 0 }">
       <v-card mx=auto style="width:344px">
         <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px" cover></v-img>
 
@@ -439,132 +435,102 @@ border
 
 # Chips
 
-  <article id="variants">
-    <h3>Variants</h3>
-    <v-preview v-show="!collapse">
+### Variants
+  <v-preview>
+    <v-chip close variant=tonal>
+      default
+    </v-chip>
+    <v-chip variant=outlined>
+      outlined
+    </v-chip>
+    <v-chip variant=elevated>
+      elevated
+    </v-chip>
+    <v-chip variant=text>
+      text
+    </v-chip>
+    <v-chip variant=plain>
+      plain
+    </v-chip>
+  </v-preview>
 
-      <v-chip close variant="tonal">
-        default
-      </v-chip>
-
-      <v-chip variant="outlined">
-        outlined
-      </v-chip>
-
-      <v-chip variant="elevated">
-        elevated
-      </v-chip>
-
-      <v-chip variant=text>
-        text
-      </v-chip>
-
-      <v-chip variant="plain">
-        plain
-      </v-chip>
-    </v-preview>
-
-  </article>
-
-  <article>
-    <h3>Colors</h3>
-    <v-preview v-show="!collapse">
-      <v-chip close color=orange>
-        Chip
-      </v-chip>
-    </v-preview>
-  </article>
-
-  <article>
-    <h3>Disabled</h3>
-    <v-chip disabled color=orange>
+### Colors
+  <v-preview>
+    <v-chip close color=orange>
       Chip
     </v-chip>
+  </v-preview>
 
-    <v-chip disabled variant="outlined" color=orange>
-      Chip
+### Disabled
+  <v-chip disabled color=orange>
+    Chip
+  </v-chip>
+  <v-chip disabled variant="outlined" color=orange>
+    Chip
+  </v-chip>
+  </v-preview>
+
+### Label
+  <p>Label chips use the <code>v-card</code> border-radius.</p>
+  <v-preview>
+    <v-chip ma=2 label>
+      Label
     </v-chip>
-    </v-preview>
+    <v-chip ma=2 color=pink label text-color=white>
+      <v-icon start icon="mdi-label"></v-icon>
+      Tags
+    </v-chip>
+    <v-chip ma=2 color=primary label>
+      <v-icon start icon="mdi-account-circle-outline"></v-icon>
+      Jelle Hak
+    </v-chip>
+    <v-chip ma=2 closable color=cyan label>
+      <v-icon start icon="mdi-twitter"></v-icon>
+      New Tweets
+    </v-chip>
+  </v-preview>
 
-  </article>
 
-  <article>
-    <h3>Label</h3>
-    <p>Label chips use the <code>v-card</code> border-radius.</p>
-
-    <v-preview v-show="!collapse">
-      <v-chip ma=2 label>
-        Label
+### Outlined
+  <v-preview>
+    <div class="text-center">
+      <v-chip ma=2 color=success variant="outlined">
+        <v-icon start icon="mdi-server-plus"></v-icon>
+        Server Status
       </v-chip>
 
-      <v-chip ma=2 color=pink label text-color=white>
-        <v-icon start icon="mdi-label"></v-icon>
-        Tags
+      <v-chip ma=2 color=primary variant="outlined">
+        User Account
+        <v-icon end icon="mdi-account-outline"></v-icon>
       </v-chip>
+    </div>
+  </v-preview>
 
-      <v-chip ma=2 color=primary label>
-        <v-icon start icon="mdi-account-circle-outline"></v-icon>
-        Jelle Hak
+### Sizes
+  <p><code>v-chip</code> component can have various sizes from <code>x-small</code> to <code>x-large</code>.</p>
+  <v-preview>
+    <div class="text-center">
+      <v-chip ma=2 size="x-small">
+        x-small chip
       </v-chip>
-
-      <v-chip ma=2 closable color=cyan label>
-        <v-icon start icon="mdi-twitter"></v-icon>
-        New Tweets
+      <v-chip ma=2 size="small">
+        small chip
       </v-chip>
-    </v-preview>
-
-  </article>
-
-  <article>
-    <h3>Outlined</h3>
-    <v-preview v-show="!collapse">
-      <div class="text-center">
-        <v-chip ma=2 color=success variant="outlined">
-          <v-icon start icon="mdi-server-plus"></v-icon>
-          Server Status
-        </v-chip>
-
-        <v-chip ma=2 color=primary variant="outlined">
-          User Account
-          <v-icon end icon="mdi-account-outline"></v-icon>
-        </v-chip>
-      </div>
-    </v-preview>
-
-  </article>
-
-  <article id="sizes">
-    <h3>Sizes</h3>
-    <p><code>v-chip</code> component can have various sizes from <code>x-small</code> to <code>x-large</code>.</p>
-    <v-preview v-show="!collapse">
-      <div class="text-center">
-        <v-chip ma=2 size="x-small">
-          x-small chip
-        </v-chip>
-
-        <v-chip ma=2 size="small">
-          small chip
-        </v-chip>
-
-        <v-chip ma=2>
-          Default
-        </v-chip>
-
-        <v-chip ma=2 size="large">
-          large chip
-        </v-chip>
-
-        <v-chip ma=2 size="x-large">
-          x-large chip
-        </v-chip>
-      </div>
-    </v-preview>
-
-  </article>
+      <v-chip ma=2>
+        Default
+      </v-chip>
+      <v-chip ma=2 size="large">
+        large chip
+      </v-chip>
+      <v-chip ma=2 size="x-large">
+        x-large chip
+      </v-chip>
+    </div>
+  </v-preview>
 
 # inputs
 
-  <v-preview v-show="!collapse">
+  <v-preview>
     <v-field>
       <label>Label</label>
       <input type="search" placeholder="search" />
@@ -601,7 +567,7 @@ border
     </v-field>
   </v-preview>
 
-  <v-preview v-show="!collapse">
+  <v-preview>
     <div flex>
       <v-field>
         <label>Label</label>
@@ -643,7 +609,7 @@ border
 # Switch
 
   <article>
-    <v-preview v-show="!collapse" v-scope="{}">
+    <v-preview v-scope="{}">
       <label>
         Label
         <v-switch></v-switch>
@@ -664,11 +630,11 @@ border
     </v-preview>
   </article>
 
-# Buttons
+## Buttons
 
 The <code>button</code> component replaces the standard html button. To style the button add the <code>variant</code> attribute.
 
-  <v-preview v-show="!collapse">
+  <v-preview>
     <div flex justify=space-evenly
       v-for="color in ['default',...TYPES.semantic.colors, 'pink','orange','deep-purple', 'red']">
       <div width="10%">{{color}}</div>
@@ -686,7 +652,7 @@ The <code>button</code> component replaces the standard html button. To style th
   </v-preview>
 
   <h3>Size control</h3>
-  <v-preview v-show="!collapse">
+  <v-preview>
     <div flex justify=space-evenly v-for="size in TYPES.sizes">
       <div width="10%">{{size}}</div>
       <template v-for="variant in TYPES.button.variants">
@@ -702,7 +668,7 @@ The <code>button</code> component replaces the standard html button. To style th
   </v-preview>
 
   <h3>Rounding</h3>
-  <v-preview v-show="!collapse">
+  <v-preview>
     <div flex v-for="rounding in TYPES.button.roundings">
       <div width="10%">{{rounding}}</div>
       <div v-for="variant in TYPES.button.variants">
@@ -712,7 +678,7 @@ The <code>button</code> component replaces the standard html button. To style th
   </v-preview>
 
   <h3>Block</h3>
-  <v-preview v-show="!collapse">
+  <v-preview>
     <button block>browser native</button>
     <template v-for="variant in TYPES.button.variants">
       <button block :variant=variant>{{variant}}</button>

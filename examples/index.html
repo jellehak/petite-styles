@@ -766,34 +766,6 @@
               aperiam temporibus odit tempora, labore et quo, repudiandae asperiores quia eos iste rerum fugit rem?`
       }
     });
-
-    /**
-    <c-el url="./template.html"></c-el>
- */
-    class CEl extends HTMLElement {
-      makeDocumentFragment(htmlText) {
-        var range = document.createRange();
-        var frag = range.createContextualFragment(htmlText);
-        var d = document.createElement('div');
-        d.appendChild(frag);
-        return d;
-      }
-
-      async connectedCallback() {
-        const url = this.getAttribute('url')
-
-        if (!url) {
-          this.innerHTML = "url is missing"
-          return
-        }
-        const resp = await fetch(url)
-        const text = await resp.text()
-
-        this.append(this.makeDocumentFragment(text))
-      }
-    }
-
-    customElements.define("c-el", CEl);
   </script>
 </body>
 
