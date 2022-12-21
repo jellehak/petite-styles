@@ -1,6 +1,6 @@
 {
   "name": "petite-ui",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A lightweight UI",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-  },
   "devDependencies": {
     "postcss": "^8.4.20",
+    "postcss-cli": "^10.1.0",
     "postcss-import": "^15.1.0"
   }
 }

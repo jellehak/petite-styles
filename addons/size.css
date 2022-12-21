@@ -1,0 +1,16 @@
+/* T-shirt based size control */
+[size="s"] {
+    --size: 1;
+}
+
+[size="m"] {
+    --size: 2;
+}
+
+[size="l"] {
+    --size: 3;
+}
+
+[size="xl"] {
+    --size: 4;
+}

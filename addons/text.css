@@ -1,87 +1,87 @@
-.text-left {
+[text=left] {
     text-align: left;
 }
 
-.text-right {
+[text=right] {
     text-align: right;
 }
 
-.text-center {
+[text=center] {
     text-align: center;
 }
 
-.text-justify {
+[text=justify] {
     text-align: justify;
 }
 
-.text-start {
+[text=start] {
     text-align: start;
 }
 
-.text-end {
+[text=end] {
     text-align: end;
 }
 
-.text-decoration-line-through {
+[text=decoration-line-through] {
     text-decoration: line-through;
 }
 
-.text-decoration-none {
+[text=decoration-none] {
     text-decoration: none;
 }
 
-.text-decoration-overline {
+[text=decoration-overline] {
     text-decoration: overline;
 }
 
-.text-decoration-underline {
+[text=decoration-underline] {
     text-decoration: underline;
 }
 
-.text-wrap {
+[text=wrap] {
     white-space: normal;
 }
 
-.text-no-wrap {
+[text=no-wrap] {
     white-space: nowrap;
 }
 
-.text-pre {
+[text=pre] {
     white-space: pre;
 }
 
-.text-pre-line {
+[text=pre-line] {
     white-space: pre-line;
 }
 
-.text-pre-wrap {
+[text=pre-wrap] {
     white-space: pre-wrap;
 }
 
-.text-break {
+[text=break] {
     overflow-wrap: break-word;
     word-break: break-word;
 }
 
-.text-high-emphasis {
+[text=high-emphasis] {
     color: rgba(var(--v-theme-on-background), var(--v-high-emphasis-opacity));
 }
 
-.text-medium-emphasis {
+[text=medium-emphasis] {
     color: rgba(var(--v-theme-on-background), var(--v-medium-emphasis-opacity));
 }
 
-.text-disabled {
+[text=disabled] {
     color: rgba(var(--v-theme-on-background), var(--v-disabled-opacity));
 }
 
-.text-truncate {
+[text=truncate] {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.text-h1 {
+[text=h1] {
     font-size: 6rem;
     font-weight: 300;
     line-height: 6rem;
@@ -90,7 +90,7 @@
     text-transform: none;
 }
 
-.text-h2 {
+[text=h2] {
     font-size: 3.75rem;
     font-weight: 300;
     line-height: 3.75rem;
@@ -99,7 +99,7 @@
     text-transform: none;
 }
 
-.text-h3 {
+[text=h3] {
     font-size: 3rem;
     font-weight: 400;
     line-height: 3.125rem;
@@ -108,7 +108,7 @@
     text-transform: none;
 }
 
-.text-h4 {
+[text=h4] {
     font-size: 2.125rem;
     font-weight: 400;
     line-height: 2.5rem;
@@ -117,7 +117,7 @@
     text-transform: none;
 }
 
-.text-h5 {
+[text=h5] {
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 2rem;
@@ -126,7 +126,7 @@
     text-transform: none;
 }
 
-.text-h6 {
+[text=h6] {
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 2rem;
@@ -135,7 +135,7 @@
     text-transform: none;
 }
 
-.text-subtitle-1 {
+[text=subtitle-1] {
     font-size: 1rem;
     font-weight: normal;
     line-height: 1.75rem;
@@ -144,7 +144,7 @@
     text-transform: none;
 }
 
-.text-subtitle-2 {
+[text=subtitle-2] {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.375rem;
@@ -153,7 +153,7 @@
     text-transform: none;
 }
 
-.text-body-1 {
+[text=body-1] {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -162,7 +162,7 @@
     text-transform: none;
 }
 
-.text-body-2 {
+[text=body-2] {
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.25rem;
@@ -171,7 +171,7 @@
     text-transform: none;
 }
 
-.text-button {
+[text=button] {
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 2.25rem;
@@ -180,7 +180,7 @@
     text-transform: uppercase;
 }
 
-.text-caption {
+[text=caption] {
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.25rem;
@@ -189,7 +189,7 @@
     text-transform: none;
 }
 
-.text-overline {
+[text=overline] {
     font-size: 0.75rem;
     font-weight: 500;
     line-height: 2rem;
@@ -198,18 +198,18 @@
     text-transform: uppercase;
 }
 
-.text-none {
+[text=none] {
     text-transform: none;
 }
 
-.text-capitalize {
+[text=capitalize] {
     text-transform: capitalize;
 }
 
-.text-lowercase {
+[text=lowercase] {
     text-transform: lowercase;
 }
 
-.text-uppercase {
+[text=uppercase] {
     text-transform: uppercase;
 }

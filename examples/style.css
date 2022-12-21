@@ -1,3 +1,14 @@
+v-preview {
+    flex-direction: column;
+    display: flex;
+    background-color: #fafafa;
+    margin: 10px;
+    min-height: 50px;
+    padding: 20px;
+    position: relative;
+    overflow: auto;
+}
+
 .v-theme--dark v-preview {
     background-color: #1e1e1e;
     color: #bababa;
@@ -8,22 +19,12 @@
     color: #1e1e1e;
 }
 
-v-preview {
-    flex-direction: column;
-    display: flex;
-    background-color: #fafafa;
-    justify-content: center;
-    margin: 10px;
-    min-height: 50px;
-    padding: 20px;
-}
-
 main {
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.v-heading>a {
+/* .v-heading>a {
     bottom: 0;
     display: inline-block;
     left: 0;
@@ -35,10 +36,10 @@ main {
 
 .v-heading>a:not(:hover):not(:focus) {
     opacity: 0;
-}
+} */
 
 
-h1:hover a,
+/* h1:hover a,
 h2:hover a,
 h3:hover a,
 h4:hover a,
@@ -56,7 +57,7 @@ h5 a,
 h6 a {
     vertical-align: middle;
     visibility: hidden;
-}
+} */
 
 section h2 {
     text-transform: capitalize;

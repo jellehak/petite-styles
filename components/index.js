@@ -72,11 +72,6 @@ class VImg extends HTMLElement {
 
 customElements.define('v-img', VImg);
 
-customElements.define('v-app-bar-nav-icon', class extends HTMLElement {
-    connectedCallback() {
-        this.innerHTML = `<v-btn variant="text"><v-icon icon="mdi-menu"></v-icon></v-btn>`
-    }
-});
 
 customElements.define('v-field', class extends HTMLElement {
     connectedCallback() { }
@@ -98,3 +93,33 @@ customElements.define('v-switch', class extends HTMLElement {
     }
 });
 
+// =====
+// Compatibility components for Vuetify
+customElements.define('v-app-bar-nav-icon', class extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `<button variant="text" icon><v-icon icon="mdi-menu"></v-icon></button>`
+    }
+});
+
+
+customElements.define('v-list-item', class extends HTMLElement {
+    connectedCallback() {
+        // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
+        // TO:
+        // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox">
+        //     <v-icon icon="mdi-email"></v-icon>
+        //     <v-list-item-title>Inbox</v-list-item-title>
+        // </v-list-item>
+
+        {
+            const el = document.createElement('v-icon')
+            el.setAttribute('icon', this.getAttribute('prepend-icon'))
+            this.prepend(el)
+        }
+        {
+            const el = document.createElement('v-list-item-title')
+            el.innerText = this.getAttribute('title')
+            this.append(el)
+        }
+    }
+});

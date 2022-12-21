@@ -1,11 +1,18 @@
 export const sizes = ['s', 'm', 'l', 'xl']
 
 export const button = {
-    variants: ['flat', 'tonal', 'outlined', 'text', 'plain']
+    roundings: ['0', 'tile', 'lg', 'pill'],
+    variants: [
+        // 'flat',
+        'tonal',
+        'outlined',
+        'text',
+        // 'plain'
+    ],
 }
 
 export const semantic = {
-    colors: ['primary', 'secondary', 'accent', 'error', 'info', 'success', 'warning']
+    colors: ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
 }
 
 export const colors = [

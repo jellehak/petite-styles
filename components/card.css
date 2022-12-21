@@ -9,7 +9,7 @@ v-card {
     transition-property: box-shadow, opacity, background;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 0;
-    border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+    border-color: rgba(var(--border-color), var(--border-opacity));
     border-style: solid;
     border-width: 0;
     border-radius: 4px;
@@ -89,15 +89,15 @@ v-card[variant=plain] v-card__overlay {
 v-card[variant=elevated],
 v-card[variant=flat] {
     background: rgb(var(--surface));
-    color: rgba(var(--on-surface), var(--v-high-emphasis-opacity));
+    color: rgba(var(--on-surface), var(--high-emphasis-opacity));
 }
 
 v-card[variant=elevated] {
-    box-shadow: 0px 2px 1px -1px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 1px 1px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 3px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+    box-shadow: 0px 2px 1px -1px var(--shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 1px 1px 0px var(--shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 1px 3px 0px var(--shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
 }
 
 v-card[variant=flat] {
-    box-shadow: 0px 0px 0px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
+    box-shadow: 0px 0px 0px 0px var(--shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
 }
 
 v-card[variant=outlined] {
@@ -110,7 +110,7 @@ v-card[variant=text] v-card__overlay {
 
 v-card[variant=tonal] .v-card__underlay {
     background: currentColor;
-    opacity: var(--v-activated-opacity);
+    opacity: var(--activated-opacity);
     border-radius: inherit;
     position: absolute;
     top: 0;
@@ -222,7 +222,7 @@ v-card-subtitle {
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.0178571429em;
-    opacity: var(--v-medium-emphasis-opacity);
+    opacity: var(--medium-emphasis-opacity);
     overflow: hidden;
     padding: 0 1rem;
     text-overflow: ellipsis;
