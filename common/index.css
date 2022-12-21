@@ -6,6 +6,7 @@
 @import url(./flex.css);
 @import url(./position.css);
 @import url(./size.css);
+@import url(./rounding.css);
 
 /* TODO */
 [avatar] {

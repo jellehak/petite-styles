@@ -4,7 +4,7 @@
  * To:
         <v-icon class="mdi-label mdi v-icon"></v-icon>
  */
-class VIcon extends HTMLElement {
+export class Icon extends HTMLElement {
     static get observedAttributes() {
         return ["icon"];
     }
@@ -28,9 +28,7 @@ class VIcon extends HTMLElement {
     }
 }
 
-customElements.define('v-icon', VIcon);
-
-class VChip extends HTMLElement {
+export class Chip extends HTMLElement {
     connectedCallback() {
         const el = document.createElement('div')
         el.classList.add('v-chip__underlay')
@@ -38,11 +36,7 @@ class VChip extends HTMLElement {
     }
 }
 
-customElements.define('v-chip', VChip);
-
-
-
-class VSheet extends HTMLElement {
+export class Sheet extends HTMLElement {
     connectedCallback() {
         const el = document.createElement('div')
         el.classList.add('v-chip__underlay')
@@ -50,9 +44,7 @@ class VSheet extends HTMLElement {
     }
 }
 
-customElements.define('v-sheet', VSheet);
-
-class VCard extends HTMLElement {
+export class Card extends HTMLElement {
     connectedCallback() {
         const el = document.createElement('span')
         el.classList.add('v-card__underlay')
@@ -60,9 +52,7 @@ class VCard extends HTMLElement {
     }
 }
 
-customElements.define('v-card', VCard);
-
-class VImg extends HTMLElement {
+export class Img extends HTMLElement {
     connectedCallback() {
         const el = document.createElement('img')
         el.src = this.getAttribute('src')
@@ -70,14 +60,11 @@ class VImg extends HTMLElement {
     }
 }
 
-customElements.define('v-img', VImg);
-
-
-customElements.define('v-field', class extends HTMLElement {
+export class Field extends HTMLElement {
     connectedCallback() { }
-});
+}
 
-customElements.define('v-switch', class extends HTMLElement {
+export class VSwitch extends HTMLElement {
     connectedCallback() {
         {
             const el = document.createElement('input')
@@ -91,27 +78,28 @@ customElements.define('v-switch', class extends HTMLElement {
         }
         {/* <span class="slider round"></span> */ }
     }
-});
+}
 
-// =====
-// Compatibility components for Vuetify
-customElements.define('v-app-bar-nav-icon', class extends HTMLElement {
+export class AppBarNavIcon extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `<button variant="text" icon><v-icon icon="mdi-menu"></v-icon></button>`
     }
-});
+}
 
-
-customElements.define('v-list-item', class extends HTMLElement {
+export class ListItem extends HTMLElement {
+    static get observedAttributes() {
+        return ["prepend-icon"];
+    }
+    attributeChangedCallback(key = "", oldValue, newValue) {}
     connectedCallback() {
+        console.log('List')
         // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
         // TO:
         // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox">
         //     <v-icon icon="mdi-email"></v-icon>
         //     <v-list-item-title>Inbox</v-list-item-title>
         // </v-list-item>
-
-        {
+        if(this.getAttribute('prepend-icon')){
             const el = document.createElement('v-icon')
             el.setAttribute('icon', this.getAttribute('prepend-icon'))
             this.prepend(el)
@@ -122,4 +110,17 @@ customElements.define('v-list-item', class extends HTMLElement {
             this.append(el)
         }
     }
-});
+}
+
+
+customElements.define('v-field', Field);
+
+// Compatibility components for Vuetify
+customElements.define('v-switch', VSwitch);
+customElements.define('v-app-bar-nav-icon', AppBarNavIcon);
+customElements.define('v-list-item', ListItem);
+customElements.define('v-icon', Icon);
+customElements.define('v-chip', Chip);
+customElements.define('v-sheet', Sheet);
+customElements.define('v-card', Card);
+customElements.define('v-img', Img);

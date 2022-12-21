@@ -4,10 +4,10 @@ v-field {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    --padding-start: 16px;
-    --padding-end: 16px;
-    --padding-top: 10px;
-    --padding-bottom: 6px;
+    --padding-start: 4px;
+    --padding-end: 4px;
+    /* --padding-top: 10px; */
+    /* --padding-bottom: 6px; */
     --transition-duration: 0.4s;
 }
 
