@@ -1,16 +1,48 @@
-/* T-shirt based size control */
-[size=s] {
-    --size: 1;
+:root {
+    --xs: 0.6;
+    --s: 0.8;
+    --m: 1;
+    --l: 1.2;
+    --xl: 1.4;
 }
 
-[size=m] {
-    --size: 2;
+[size=xs] {
+    --size: var(--xs);
+}
+
+[size=s] {
+    --size: var(--s);
+}
+
+[size=m],[size=] {
+    --size: var(--m);
 }
 
 [size=l] {
-    --size: 3;
+    --size: var(--l);
 }
 
 [size=xl] {
-    --size: 4;
+    --size: var(--xl);
+}
+
+/* alternative */
+[size=x-small] {
+    --size: var(--xs);
+}
+
+[size=small] {
+    --size: var(--s);
+}
+
+[size=medium],[size=] {
+    --size: var(--m);
+}
+
+[size=large] {
+    --size: var(--l);
+}
+
+[size=x-large] {
+    --size: var(--xl);
 }

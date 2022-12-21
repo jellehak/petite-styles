@@ -1,4 +1,5 @@
-export const sizes = ['s', 'm', 'l', 'xl']
+export const sizesAlt = ['xs', 's', 'm', 'l', 'xl']
+export const sizes = ['x-small', 'small', '', 'large', 'x-large']
 
 export const button = {
     roundings: ['0', 'tile', 'lg', 'pill'],
@@ -11,6 +12,9 @@ export const button = {
     ],
 }
 
+/**
+ * Semantic colors denote standard value states
+ */
 export const semantic = {
     colors: ['primary', 'secondary', 'accent', 'success', 'info', 'warning', 'error']
 }

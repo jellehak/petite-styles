@@ -6,7 +6,7 @@ v-sheet {
   border-width: 0;
   box-shadow: 0px 0px 0px 0px var(--v-shadow-key-umbra-opacity, rgba(0, 0, 0, 0.2)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.14)), 0px 0px 0px 0px var(--v-shadow-key-penumbra-opacity, rgba(0, 0, 0, 0.12));
   border-radius: 0;
-  background: var(--color, rgb(var(--surface)));
+  background: rgb(var(--color,var(--surface)));
   color: rgba(var(--on-background), var(--v-high-emphasis-opacity));
 }
 v-sheet[border] {

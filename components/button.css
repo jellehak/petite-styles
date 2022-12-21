@@ -1,9 +1,4 @@
-button {
-  /* --color: 33, 33, 33; */
-  --color: var(--background);
-  --height: calc(var(--size, 1) * 10px);
-}
-
+/* Common */
 button[variant=""], button[variant], button[icon] {
   cursor: pointer;
   display: flex;
@@ -11,21 +6,23 @@ button[variant=""], button[variant], button[icon] {
   border-radius: 4px;
   font-weight: 500;
   justify-content: center;
-  letter-spacing: 0.0892857143em;
+  letter-spacing: 0.09em;
   outline: none;
-  /* position: relative; */
   text-transform: uppercase;
   transition-property: box-shadow, transform, opacity, background;
-  transition-duration: 0.28s;
+  transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-color: rgba(var(--v-border-color), var(--v-border-opacity));
   border-style: solid;
   border-width: 0;
-  background-color: rgba(var(--color), var(--opacity, 0.6));
-  padding: calc(var(--size, 1) * 10px);
-  /* --height: var(--size, 1) * 10px; */
+  background-color: rgba(var(--color, var(--background)), var(--opacity, 0.6));
+  /* padding: calc(var(--size, 1) * 10px); */
+  /* height: calc(var(--size, 1) * 36px); */
+  height: var(--height);
+  font-size: var(--size);
 }
 
+/* Variants */
 button[variant]:hover {
   background-color: rgba(var(--color), var(--hover-opacity, 1));
 }
@@ -33,9 +30,8 @@ button[variant=text] {
   background: transparent;
 }
 
-/* outlined */
 button[variant=outlined] {
-  color: rgb(var(--color));
+  color: rgb(var(--color, var(--on-surface)));
   background-color: transparent;
   border: thin solid currentColor;
 }
@@ -56,4 +52,47 @@ button[icon] {
 }
 button[icon]:hover {
   background-color: rgba(var(--color), 0.2);
+}
+
+button[tile] {
+  border-radius: 0;
+}
+
+/* size control */
+/* Reference size chart
+xs = 20px
+s = 28px
+m = 36px
+l = 44px
+xl = 52px
+*/
+
+button[size=default],
+button {
+  --size: 0.875rem;
+  --height: 36px;
+  font-size: 0.875rem;
+  min-width: 64px;
+  padding: 0 16px;
+}
+
+button[size=x-small] {
+  --size: 0.625rem;
+  --height: 20px;
+}
+
+button[size=small] {
+  --size: 0.75rem;
+  --height: 28px;
+}
+
+
+button[size=large] {
+  --size: 1rem;
+  --height: 44px;
+}
+
+button[size=x-large] {
+  --size: 1.125rem;
+  --height: 52px;
 }

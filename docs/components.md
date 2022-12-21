@@ -1,6 +1,6 @@
 <div v-scope="{ dark: true }" :class="dark ? 'v-theme--dark' : 'v-theme--light'">
-# &nbsp;
 
+# &nbsp;
 <!-- docsify fix see https://github.com/docsifyjs/docsify/issues/1094 -->
 
 <v-toolbar position=fixed color=deep-purple style="top:0">
@@ -11,6 +11,16 @@
   </button>
 </v-toolbar>
 
+# Common
+## Color modifiers
+
+  <v-preview>
+    <!-- {{TYPES.semantic}} -->
+    <template v-for="color in TYPES.semantic.colors">
+      <v-sheet :color="color">{{color}}</v-sheet>
+    </template>
+    <v-sheet style='background:#03DAC6;'></v-sheet>
+  </v-preview>
 
 # Alert
 
@@ -34,30 +44,28 @@
 
 # Toolbar
 
-  <article>
-    <v-preview v-scope="{}">
-      <v-toolbar>
-        <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
-        <v-toolbar-title>Application</v-toolbar-title>
-      </v-toolbar>
-    </v-preview>
-    <v-preview v-scope="{}">
-      <v-toolbar density="compact" color=deep-purple>
-        <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
-        <v-toolbar-title>Compact</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <button icon>
-          <v-icon>mdi-magnify</v-icon>
-        </button>
-        <button icon>
-          <v-icon>mdi-heart</v-icon>
-        </button>
-        <button icon>
-          <v-icon>mdi-dots-vertical</v-icon>
-        </button>
-      </v-toolbar>
-    </v-preview>
-  </article>
+<v-preview v-scope="{}">
+  <v-toolbar>
+    <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
+    <v-toolbar-title>Application</v-toolbar-title>
+  </v-toolbar>
+</v-preview>
+<v-preview v-scope="{}">
+  <v-toolbar density="compact" color=deep-purple>
+    <v-app-bar-nav-icon @click="alert('clicked')"></v-app-bar-nav-icon>
+    <v-toolbar-title>Compact</v-toolbar-title>
+    <v-spacer></v-spacer>
+    <button icon>
+      <v-icon>mdi-magnify</v-icon>
+    </button>
+    <button icon>
+      <v-icon>mdi-heart</v-icon>
+    </button>
+    <button icon>
+      <v-icon>mdi-dots-vertical</v-icon>
+    </button>
+  </v-toolbar>
+</v-preview>
 
 # List
 The `v-list` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists present content in a way that makes it easy to identify a specific item in a collection. They provide a consistent styling for organizing groups of text and images.
@@ -488,8 +496,14 @@ The <code>v-card</code> component provides a simple interface
 The <code>button</code> component replaces the standard html button. To style the button add the <code>variant</code> attribute.
 
 <v-preview>
+  <button variant>button</button>
+  <button variant="">button</button>
+  <button variant=tonal>button</button>
+</v-preview>
+
+<v-preview>
   <div flex justify=space-evenly
-    v-for="color in ['default',...TYPES.semantic.colors, 'pink','orange','deep-purple', 'red']">
+    v-for="color in ['',...TYPES.semantic.colors, 'pink','orange','deep-purple', 'red']">
     <div width="10%">{{color}}</div>
     <template v-for="variant in TYPES.button.variants">
       <button :color=color :variant=variant>{{variant}}</button>
@@ -502,26 +516,74 @@ The <code>button</code> component replaces the standard html button. To style th
   <div flex justify=space-evenly v-for="size in TYPES.sizes">
     <div width="10%">{{size}}</div>
     <template v-for="variant in TYPES.button.variants">
-      <button :size=size :variant=variant>{{variant}}</button>
+      <button :size="size" :variant=variant>{{variant}}</button>
     </template>
-    <button :size=size icon>
-      <v-icon>mdi-weather-sunny</v-icon>
-    </button>
-    <button :size=size color=primary icon>
+    <button :size="size" color=primary icon>
       <v-icon>mdi-weather-sunny</v-icon>
     </button>
   </div>
 </v-preview>
 
-## Rounding
 <v-preview>
-  <div flex v-for="rounding in TYPES.button.roundings">
-    <div width="10%">{{rounding}}</div>
-    <div v-for="variant in TYPES.button.variants">
-      <button color=primary :rounding="rounding" :variant=variant>{{variant}}</button>
+    <!-- <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height"> -->
+    <div flex=column align=center justify=space-around>
+      <button variant
+        size="x-small"
+        color="secondary"
+      >
+        Extra small Button
+      </button>
+      <button variant
+        size="small"
+        color="primary"
+      >
+        Small Button
+      </button>
+      <button variant
+        color="warning"
+      >
+        Normal Button
+      </button>
+      <button variant
+        color="error"
+        size="large"
+      >
+        Large Button
+      </button>
+      <button variant
+        size="x-large"
+        color="success"
+      >
+        Extra large Button
+      </button>
     </div>
-  </div>
-</v-preview>
+    <div flex=column align=center justify=space-around>
+      <button variant
+        color="secondary"
+        icon="mdi-television"
+        size="x-small"
+      ></button>
+      <button variant
+        color="primary"
+        icon="mdi-pencil"
+        size="small"
+      ></button>
+      <button variant
+        color="warning"
+        icon="mdi-account-circle"
+      ></button>
+      <button variant
+        color="error"
+        icon="mdi-alarm"
+        size="large"
+      ></button>
+      <button variant
+        color="success"
+        icon="mdi-domain"
+        size="x-large"
+      ></button>
+    </div>
+    </v-preview>
 
 ## Block
 <v-preview>

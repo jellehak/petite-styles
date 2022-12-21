@@ -37,11 +37,7 @@ export class Chip extends HTMLElement {
 }
 
 export class Sheet extends HTMLElement {
-    connectedCallback() {
-        const el = document.createElement('div')
-        el.classList.add('v-chip__underlay')
-        this.prepend(el)
-    }
+    connectedCallback() { }
 }
 
 export class Card extends HTMLElement {
@@ -92,7 +88,6 @@ export class ListItem extends HTMLElement {
     }
     attributeChangedCallback(key = "", oldValue, newValue) {}
     connectedCallback() {
-        console.log('List')
         // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
         // TO:
         // <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox">

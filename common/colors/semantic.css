@@ -11,7 +11,7 @@
     --color: var(--info);
 }
 [color=success] {
-    --color: var( );
+    --color: var(--success);
 }
 [color=warning] {
     --color: var(--warning);
