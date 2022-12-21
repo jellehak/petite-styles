@@ -4,18 +4,6 @@
     --surface: #fff;
     --on-surface: #000;
     --overlay-multiplier: 1;
-    --scrollbar-offset: 0px;
-    --border-opacity: 0.12;
-    --high-emphasis-opacity: 0.87;
-    --medium-emphasis-opacity: 0.6;
-    --disabled-opacity: 0.38;
-    --idle-opacity: 0.04;
-    --hover-opacity: 0.04;
-    --focus-opacity: 0.12;
-    --selected-opacity: 0.08;
-    --activated-opacity: 0.12;
-    --pressed-opacity: 0.12;
-    --dragged-opacity: 0.08;
     
     --primary: 24, 103, 192;
     --secondary: 92, 187, 246;
@@ -26,16 +14,13 @@
     --tertiary: 229, 115, 115;
     --accent: 0, 92, 175;
 
-    --on-primary: 255, 255, 255;
-    --on-secondary: 0, 0, 0;
-    --on-error: 255, 255, 255;
-    --on-info: 255, 255, 255;
-    --on-success: 255, 255, 255;
-    --on-warning: 255, 255, 255;
-
-    /* button */
+    /* opacity */
     --opacity: 0.6;
     --hover-opacity: 1;
+    --border-opacity: 0.12;
+    --high-emphasis-opacity: 0.87;
+    --medium-emphasis-opacity: 0.6;
+    --activated-opacity: 0.12;
 }
 
 .v-theme--light {

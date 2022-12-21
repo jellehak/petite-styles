@@ -71,9 +71,6 @@ button[size=default],
 button {
   --size: 0.875rem;
   --height: 36px;
-  font-size: 0.875rem;
-  min-width: 64px;
-  padding: 0 16px;
 }
 
 button[size=x-small] {

@@ -32,14 +32,28 @@
     <script type="module">
         // Framework integration
         import * as TYPES from "../types.js"
-        import { createApp } from 'https://unpkg.com/petite-vue?module'
+        import { createApp, reactive } from 'https://unpkg.com/petite-vue?module'
 
-        window.$docsify.plugins.push(function myPlugin1(hook, vm) {
-            hook.doneEach(function () {
-                createApp({
-                    TYPES
-                }).mount()
-            });
+        function main() {
+            const state = reactive({
+                TYPES,
+                viewport: {
+                    height: 0,
+                    width: 0
+                }
+            })
+            createApp(state).mount()
+
+            onResize()
+            function onResize(event) {
+                state.viewport.height = window.innerHeight
+                state.viewport.width = window.innerWidth
+            }
+            addEventListener("resize", onResize);
+        }
+
+        window.$docsify.plugins.push(function (hook, vm) {
+            hook.doneEach(main);
         })
     </script>
 </body>

@@ -1,6 +1,14 @@
+<style>
+  v-sheet {
+    min-height: 100px;
+    min-width: 100px
+  }
+</style>
+
 <div v-scope="{ dark: true }" :class="dark ? 'v-theme--dark' : 'v-theme--light'">
 
 # &nbsp;
+
 <!-- docsify fix see https://github.com/docsifyjs/docsify/issues/1094 -->
 
 <v-toolbar position=fixed color=deep-purple style="top:0">
@@ -10,17 +18,6 @@
     <v-icon v-if="dark">mdi-weather-night</v-icon>
   </button>
 </v-toolbar>
-
-# Common
-## Color modifiers
-
-  <v-preview>
-    <!-- {{TYPES.semantic}} -->
-    <template v-for="color in TYPES.semantic.colors">
-      <v-sheet :color="color">{{color}}</v-sheet>
-    </template>
-    <v-sheet style='background:#03DAC6;'></v-sheet>
-  </v-preview>
 
 # Alert
 
@@ -68,14 +65,15 @@
 </v-preview>
 
 # List
+
 The `v-list` component is used to display information. It can contain an avatar, content, actions, subheaders and much more. Lists present content in a way that makes it easy to identify a specific item in a collection. They provide a consistent styling for organizing groups of text and images.
 <v-preview v-scope="{}">
-  <v-list nav>
-    <v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
-    <v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors"
+<v-list nav>
+<v-list-item prepend-icon="mdi-email" title="Inbox" value="inbox"></v-list-item>
+<v-list-item prepend-icon="mdi-account-supervisor-circle" title="Supervisors"
       value="supervisors"></v-list-item>
-    <v-list-item prepend-icon="mdi-clock-start" title="Clock-in" value="clockin"></v-list-item>
-  </v-list>
+<v-list-item prepend-icon="mdi-clock-start" title="Clock-in" value="clockin"></v-list-item>
+</v-list>
 </v-preview>
 
 <v-preview v-scope="{items: [
@@ -92,9 +90,9 @@ The `v-list` component is used to display information. It can contain an avatar,
           value: 3,
         },
       ]}">
-  <v-list nav>
-    <v-list-item v-for="item in items" v-bind="item"></v-list-item>
-  </v-list>
+<v-list nav>
+<v-list-item v-for="item in items" v-bind="item"></v-list-item>
+</v-list>
 </v-preview>
 
 # Drawer
@@ -160,13 +158,6 @@ The `v-list` component is used to display information. It can contain an avatar,
 </v-preview>
 
 # Sheet
-
-<style>
-  v-sheet {
-    min-height: 100px;
-    min-width: 100px
-  }
-</style>
 The <code>v-sheet</code> component is a transformable piece of <span style="text-decoration:underline">paper</span> that provides a basic foundation.
 
 <v-preview>
@@ -192,7 +183,7 @@ The <code>v-sheet</code> component is a transformable piece of <span style="text
 # Cards
 
 The <code>v-card</code> component provides a simple interface
-    for headings, text, images, icons, and more.
+for headings, text, images, icons, and more.
 
 <v-preview flex="row">
   <!-- 'flat' | 'elevated' | 'tonal' | 'outlined' | 'text' | 'plain' -->
@@ -501,6 +492,8 @@ The <code>button</code> component replaces the standard html button. To style th
   <button variant=tonal>button</button>
 </v-preview>
 
+## Colors and variants
+
 <v-preview>
   <div flex justify=space-evenly
     v-for="color in ['',...TYPES.semantic.colors, 'pink','orange','deep-purple', 'red']">
@@ -512,6 +505,7 @@ The <code>button</code> component replaces the standard html button. To style th
 </v-preview>
 
 ## Size control
+
 <v-preview>
   <div flex justify=space-evenly v-for="size in TYPES.sizes">
     <div width="10%">{{size}}</div>
@@ -525,67 +519,68 @@ The <code>button</code> component replaces the standard html button. To style th
 </v-preview>
 
 <v-preview>
-    <!-- <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height"> -->
-    <div flex=column align=center justify=space-around>
-      <button variant
-        size="x-small"
-        color="secondary"
-      >
-        Extra small Button
-      </button>
-      <button variant
-        size="small"
-        color="primary"
-      >
-        Small Button
-      </button>
-      <button variant
-        color="warning"
-      >
-        Normal Button
-      </button>
-      <button variant
-        color="error"
-        size="large"
-      >
-        Large Button
-      </button>
-      <button variant
-        size="x-large"
-        color="success"
-      >
-        Extra large Button
-      </button>
-    </div>
-    <div flex=column align=center justify=space-around>
-      <button variant
-        color="secondary"
-        icon="mdi-television"
-        size="x-small"
-      ></button>
-      <button variant
-        color="primary"
-        icon="mdi-pencil"
-        size="small"
-      ></button>
-      <button variant
-        color="warning"
-        icon="mdi-account-circle"
-      ></button>
-      <button variant
-        color="error"
-        icon="mdi-alarm"
-        size="large"
-      ></button>
-      <button variant
-        color="success"
-        icon="mdi-domain"
-        size="x-large"
-      ></button>
-    </div>
-    </v-preview>
+  <!-- <div class="d-flex justify-space-around align-center flex-column flex-md-row fill-height"> -->
+  <div flex=column align=center justify=space-around>
+    <button variant
+      size="x-small"
+      color="secondary"
+    >
+      Extra small Button
+    </button>
+    <button variant
+      size="small"
+      color="primary"
+    >
+      Small Button
+    </button>
+    <button variant
+      color="warning"
+    >
+      Normal Button
+    </button>
+    <button variant
+      color="error"
+      size="large"
+    >
+      Large Button
+    </button>
+    <button variant
+      size="x-large"
+      color="success"
+    >
+      Extra large Button
+    </button>
+  </div>
+  <div flex=column align=center justify=space-around>
+    <button variant
+      color="secondary"
+      icon="mdi-television"
+      size="x-small"
+    ></button>
+    <button variant
+      color="primary"
+      icon="mdi-pencil"
+      size="small"
+    ></button>
+    <button variant
+      color="warning"
+      icon="mdi-account-circle"
+    ></button>
+    <button variant
+      color="error"
+      icon="mdi-alarm"
+      size="large"
+    ></button>
+    <button variant
+      color="success"
+      icon="mdi-domain"
+      size="x-large"
+    ></button>
+  </div>
+</v-preview>
 
 ## Block
+
 <v-preview>
   <button block>browser native</button>
   <template v-for="variant in TYPES.button.variants">

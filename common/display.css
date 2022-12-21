@@ -1,0 +1,27 @@
+/* 
+Inspiration found in:
+- https://www.w3schools.com/w3css/w3css_responsive.asp
+- https://next.vuetifyjs.com/en/styles/display/
+*/
+
+:root {
+    --small-breakpoint: 600px;
+    --medium-breakpoint: 960px;
+    --large-breakpoint: 1280px;
+}
+
+/* sm */
+@media (max-width: 600px) {
+   [hide=small] { display: none; } 
+}
+
+/* md */
+@media (max-width: 960px) {
+   [hide=medium] { display: none; } 
+}
+
+/* lg */
+@media (max-width: 1280px) {
+   [hide=large] { display: none; } 
+}
+

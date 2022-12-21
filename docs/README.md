@@ -1,6 +1,6 @@
 # Styler
 
-a lightweight UI Framework based on handy selectors and a sprinkle of JavaScript
+a lightweight CSS/UI Framework based on handy selectors and a sprinkle of JavaScript
 
 Designed to be:
 
@@ -34,7 +34,7 @@ Attribute based styling
 > NOTE as most attribute values are one word, the quotes are fine to be omitted.
 
 ## Motivation
-We have been using Bootstrap, Vuetify (Vue), and to lesser extend MUI and Ant Design (React) for our projects. These are all great frameworks but not suited for smaller projects or just a static webpages. After playing around with `Alpine` and `Petite-vue` we kind of missed an easy to use UI library. So we went under the hood of some of these libraries and created a set of style rules and webcomponents that work with any framework.
+We have been using Bootstrap, Vuetify (Vue), W3.CSS and to some extend MUI and Ant Design (React) for our projects. These are all great libraries but not suited for smaller projects or just a static webpages. After playing around with `Alpine` and `Petite-vue` we kind of missed an easy to use UI library. So we went under the hood of some of these libraries and created a set of style rules and webcomponents that work with any framework.
 
 # Usage
 ```html

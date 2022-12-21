@@ -25,3 +25,20 @@ v-preview {
     background-color: #bababa;
     color: #1e1e1e;
 }
+
+/* max-height helpers */
+[max] {
+    overflow: auto;
+}
+[max="1/4"] {
+    max-height: 25vh;
+}
+[max="2/4"] {
+    max-height: 50vh;
+}
+[max="3/4"] {
+    max-height: 75vh;
+}
+[max="1"] {
+    max-height: 100vh;
+}
