@@ -1,0 +1,36 @@
+/* https://www.w3schools.com/howto/howto_css_loader.asp */
+/* https://next.vuetifyjs.com/en/components/progress-circular/ */
+
+v-progress-circular {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+/* underlay */
+v-progress-circular {
+    --thickness: 6px;
+    --underlay-color: rgba(var(--border-color),0.12);
+    border: var(--thickness) solid var(--underlay-color);
+    border-top: var(--thickness) solid #3498db;
+}
+
+v-progress-circular {
+    width: calc(var(--size, 1) * 60px);
+    height: calc(var(--size, 1) * 60px);
+    border-top-color: rgb(var(--color));
+}
+
+v-progress-circular[indeterminate] {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

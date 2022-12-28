@@ -44,6 +44,27 @@
   </v-overlay>
 </v-preview>
 
+# progress
+
+<v-preview>
+  <progress max="100" value="70"> 70% </progress>
+</v-preview>
+
+# progress-circular
+
+## indeterminate
+
+Using the <code>indeterminate</code> prop, a <code>v-progress-circular</code> continues to animate indefinitely.
+
+<v-preview>
+<div flex>
+  <v-progress-circular indeterminate></v-progress-circular>
+  <v-progress-circular size="s" indeterminate></v-progress-circular>
+  <v-progress-circular color="primary" indeterminate></v-progress-circular>
+  <v-progress-circular color="warning" size="s" indeterminate></v-progress-circular>
+  </div>
+</v-preview>
+
 # Alert
 
 <v-preview>
