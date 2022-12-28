@@ -19,7 +19,7 @@
   </button>
 </v-toolbar>
 
-## Display helpers
+# Display helpers
 
 The display helpers allow you to control the display of content. This includes being conditionally visible based upon the current viewport, or the actual element display type.
 
@@ -46,29 +46,8 @@ The display helpers allow you to control the display of content. This includes b
   </div> -->
 </div>
 
-## Sizing
 
-### width
-
-<v-preview>
-  <v-sheet width="25">25</v-sheet>
-  <v-sheet width="50">50</v-sheet>
-  <v-sheet width="75">75</v-sheet>
-  <v-sheet width="100">100</v-sheet>
-</v-preview>
-
-### height
-
-<v-preview>
-  <div flex height="50vh">
-    <v-sheet height="25">25</v-sheet>
-    <v-sheet height="50">50</v-sheet>
-    <v-sheet height="75">75</v-sheet>
-    <v-sheet height="100">100</v-sheet>
-  </div>
-</v-preview>
-
-## Color modifiers
+# Color modifiers
 
 <v-preview>
   <template v-for="color in TYPES.semantic.colors">
@@ -77,7 +56,7 @@ The display helpers allow you to control the display of content. This includes b
   <v-sheet style='background:#03DAC6;'></v-sheet>
 </v-preview>
 
-## Spacing helpers
+# Spacing helpers
 
 The property applies the type of spacing:
 
@@ -111,9 +90,9 @@ The property applies the type of spacing:
 
 > NOTE this is a compacted version of https://next.vuetifyjs.com/en/styles/spacing/
 
-## Text helpers
+# Text helpers
 
-### align
+## align
 
 <v-preview>
   <span text=left>left</span>
@@ -124,7 +103,7 @@ The property applies the type of spacing:
   <span text=end>end</span>
 </v-preview>
 
-### Typography
+## Typography
 
 Control the size and style of text using the Typography helper classes. These values are based upon the [Material Design type specification](https://m2.material.io/design/typography/the-type-system.html).
 <v-preview>
