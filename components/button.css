@@ -44,12 +44,13 @@ button[block] {
 }
 
 /* icon */
-button[icon] {
+button[icon], button[variant=icon] {
   border-radius: 50%;
   font-size: calc(var(--size) * 10px);
   width: calc(var(--height) + 12px);
   height: calc(var(--height) + 12px);
 }
+
 button[icon]:hover {
   background-color: rgba(var(--color), 0.2);
 }

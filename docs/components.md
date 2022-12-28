@@ -476,6 +476,29 @@ for headings, text, images, icons, and more.
     </select>
     <v-field-hint>v-hint</v-field-hint>
   </v-field>
+  <v-field>
+    <label>Datelist</label>
+    <input list="ice-cream-flavors" type=search>
+    <datalist id="ice-cream-flavors">
+      <option value="Chocolate">
+      <option value="Coconut">
+      <option value="Mint">
+      <option value="Strawberry">
+      <option value="Vanilla">
+    </datalist>
+    <v-field-hint>v-hint</v-field-hint>
+  </v-field>
+
+  <v-field>
+    <label>Datelist (time)</label>
+    <input type="time" list="popularHours" />
+    <datalist id="popularHours">
+      <option value="12:00"></option>
+      <option value="13:00"></option>
+      <option value="14:00"></option>
+    </datalist>
+  </v-field>
+
 </v-preview>
 
 ## Switch
@@ -599,30 +622,25 @@ The <code>button</code> component replaces the standard html button. To style th
     </button>
   </div>
   <div flex=column align=center justify=space-around>
-    <button variant
+    <button variant=icon
       color="secondary"
-      icon="mdi-television"
       size="x-small"
-    ></button>
-    <button variant
+    ><v-icon>mdi-rocket</v-icon></button>
+    <button variant=icon
       color="primary"
-      icon="mdi-pencil"
       size="small"
-    ></button>
-    <button variant
+    ><v-icon>mdi-rocket</v-icon></button>
+    <button variant=icon
       color="warning"
-      icon="mdi-account-circle"
-    ></button>
-    <button variant
+    ><v-icon>mdi-rocket</v-icon></button>
+    <button variant=icon
       color="error"
-      icon="mdi-alarm"
       size="large"
-    ></button>
-    <button variant
+    ><v-icon>mdi-rocket</v-icon></button>
+    <button variant=icon
       color="success"
-      icon="mdi-domain"
       size="x-large"
-    ></button>
+    ><v-icon>mdi-rocket</v-icon></button>
   </div>
 </v-preview>
 
