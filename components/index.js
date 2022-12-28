@@ -107,6 +107,11 @@ export class ListItem extends HTMLElement {
     }
 }
 
+export class Btn extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `<button variant="${this.getAttribute('variant')}">${this.innerHTML}</button>`
+    }
+}
 
 customElements.define('v-field', Field);
 
@@ -119,3 +124,4 @@ customElements.define('v-chip', Chip);
 customElements.define('v-sheet', Sheet);
 customElements.define('v-card', Card);
 customElements.define('v-img', Img);
+customElements.define('v-btn', Btn);

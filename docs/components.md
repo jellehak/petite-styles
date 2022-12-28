@@ -19,6 +19,31 @@
   </button>
 </v-toolbar>
 
+# Overlay
+
+<v-preview height=25vh v-scope="{overlay:false}">
+  Background
+  <v-overlay contained flex=center>Overlay</v-overlay>
+</v-preview>
+<v-preview height=25vh v-scope="{overlay:false}">
+  <v-btn
+    color="error"
+    @click="overlay = !overlay"
+    >
+      Show Overlay
+  </v-btn>
+  <v-overlay contained v-if="overlay">
+    <v-flex flex=center>
+      <button
+        color="error"
+        @click="overlay = false"
+        >
+          close
+      </button>
+    </v-flex>
+  </v-overlay>
+</v-preview>
+
 # Alert
 
 <v-preview>
@@ -158,6 +183,7 @@ The `v-list` component is used to display information. It can contain an avatar,
 </v-preview>
 
 # Sheet
+
 The <code>v-sheet</code> component is a transformable piece of <span style="text-decoration:underline">paper</span> that provides a basic foundation.
 
 <v-preview>

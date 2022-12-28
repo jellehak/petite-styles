@@ -1,0 +1,24 @@
+v-overlay {
+    pointer-events: auto;
+    background: rgb(var(--v-theme-on-surface));
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+v-overlay[absolute] {
+    position: absolute;
+}
+
+v-overlay[contained] {
+    position: absolute;
+}
+
+
+/* A bit cooler overlay effect */
+v-overlay {
+    backdrop-filter: blur(1px);
+    background-color: rgba(29, 29, 29, 0.2);
+}
