@@ -49,7 +49,6 @@ v-field:has(input:focus) v-overlay {
   <v-field>
     <label>text field</label>
     <input type=text v-model=form.text>
-    <v-overlay></v-overlay>
   </v-field>
   <v-field>
     <label>theme color</label>

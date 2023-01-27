@@ -23,6 +23,7 @@
 
 /* All element modifiers */
 * {
+    color: var(--color);
     background-color: var(--background-color);
     padding: var(--padding);
     margin: var(--margin);

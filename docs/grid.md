@@ -1,18 +1,20 @@
 # &nbsp;
 
 <!-- docsify fix see https://github.com/docsifyjs/docsify/issues/1094 -->
+<style>
+  v-card {
+    --color: white;
+    --background-color: #da46ef;
+    --padding: 10px;
+  }
+</style>
 
 # Basic usage
 
 Use the `grid={n}` utilities to create grids with n equally sized columns.
 
 <v-preview>
-  <style>
-    v-card {
-      --background-color: purple;
-      --padding: 10px;
-    }
-  </style>
+
   <div grid="2" gap=small>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
