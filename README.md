@@ -27,4 +27,4 @@ Features:
 ```
 
 # Thanks
-- Component names are fairly similar as vuetify. https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css
+- Naming convention is heavily inspired by vuetify. https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css
