@@ -35,15 +35,6 @@ The display helpers allow you to control the display of content. This includes b
   <div hide="large">
     hide on large screens
   </div>
-  <!-- <div show="small">
-    show on small screens 
-  </div>
-  <div show="medium">
-    show on medium screens
-  </div>
-  <div show="large">
-    show on large screens
-  </div> -->
 </div>
 
 

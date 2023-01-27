@@ -1,83 +1,69 @@
-/* flex: 0 0 33.3333333333%;
-max-width: 33.3333333333%;
-<v-card variant=outlined sm=4 cols=12>center</v-card>
-<v-card variant=outlined sm=4 cols=12>center</v-card>
-<v-card variant=outlined sm=4 cols=12>center</v-card> */
+/* @import url("./size.css"); */
+/* 
+inspired by https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css 
+- rewritten to use calc functions
+*/
 
-[cols] {
-    flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
+[grid]{
+    display: grid;
 }
 
-[cols=auto] {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
+[grid="2"]{
+    grid-template-columns: auto auto;
+}
+[grid="3"]{
+    grid-template-columns: auto auto auto;
+}
+[grid="4"]{
+    grid-template-columns: auto auto auto auto;
+}
+[grid="5"]{
+    grid-template-columns: auto auto auto auto auto;
+}
+[grid="6"]{
+    grid-template-columns: auto auto auto auto auto auto;
 }
 
-[cols="1"] {
-    flex: 0 0 8.3333333333%;
-    max-width: 8.3333333333%;
+/* Gap control */
+[gap="small"]{
+    --gap: 10px;
+}
+[gap="medium"]{
+    --gap: 20px;
+}
+[gap="large"]{
+    --gap: 30px;
+}
+[gap]{
+    grid-gap: var(--gap);
 }
 
-[cols="2"] {
-    flex: 0 0 16.6666666667%;
-    max-width: 16.6666666667%;
-}
 
-[cols="3"] {
-    flex: 0 0 25%;
-    max-width: 25%;
-}
-
-[cols="4"] {
-    flex: 0 0 33.3333333333%;
-    max-width: 33.3333333333%;
-}
-
-[cols="5"] {
-    flex: 0 0 41.6666666667%;
-    max-width: 41.6666666667%;
-}
-
-[cols="6"] {
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-
-[cols="7"] {
-    flex: 0 0 58.3333333333%;
-    max-width: 58.3333333333%;
-}
-
-[cols="8"] {
-    flex: 0 0 66.6666666667%;
-    max-width: 66.6666666667%;
-}
-
-[cols="9"] {
-    flex: 0 0 75%;
-    max-width: 75%;
-}
-
-[cols="10"] {
-    flex: 0 0 83.3333333333%;
-    max-width: 83.3333333333%;
-}
-
-[cols="11"] {
-    flex: 0 0 91.6666666667%;
-    max-width: 91.6666666667%;
-}
-
-[cols="12"] {
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-
+/* Responsive */
 @media (min-width: 600px) {
-    [sm="4"] {
-        flex-basis: calc(4/12 * 100%);
+    /* SM */
+    [grid-sm="2"]{
+        grid-template-columns: auto auto;
     }
+    [grid-sm="3"]{
+        grid-template-columns: auto auto auto;
+    }
+    [grid-sm="4"]{
+        grid-template-columns: auto auto auto auto;
+    }
+    [grid-sm="5"]{
+        grid-template-columns: auto auto auto auto auto;
+    }
+    [grid-sm="6"]{
+        grid-template-columns: auto auto auto auto auto auto;
+    }
+}
+@media (min-width: 960px) {
+    /* MD */
+}
+@media (min-width: 1280px) {
+    /* LG */
+}
+@media (min-width: 1920px) {
+    /* XL */
 }

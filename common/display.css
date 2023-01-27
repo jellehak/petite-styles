@@ -4,11 +4,11 @@ Inspiration found in:
 - https://next.vuetifyjs.com/en/styles/display/
 */
 
-:root {
+/* :root {
     --small-breakpoint: 600px;
     --medium-breakpoint: 960px;
     --large-breakpoint: 1280px;
-}
+} */
 
 /* sm */
 @media (max-width: 600px) {
@@ -25,3 +25,27 @@ Inspiration found in:
    [hide=large] { display: none; } 
 }
 
+[display=grid] { 
+   display: grid; 
+}
+
+/* show */
+[show] {
+   display: none;
+   --display: inherit;
+}
+@media (max-width: 599.98px) {
+   [show=xs] { display: var(--display); } 
+ }
+@media (min-width: 600px) and (max-width: 959.98px) {
+   [show=sm] { display: var(--display); } 
+}
+@media (min-width: 960px) and (max-width: 1279.98px) {
+   [show=md] { display: var(--display); } 
+}
+@media (min-width: 1280px) and (max-width: 1919.98px) {
+   [show=lg] { display: var(--display); }
+}
+@media (min-width: 1920px) and (max-width: 2559.98px) {
+   [show=xl] { display: var(--display); }
+}

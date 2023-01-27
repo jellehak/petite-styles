@@ -1,0 +1,128 @@
+/* 
+inspired by https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css 
+- rewritten to use calc functions
+DEPRECATED use grid.css
+*/
+
+[cols] {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+/* [cols=auto] {
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+} */
+
+[cols="1"] {
+    --w: calc(1 / 12);
+}
+
+[cols="2"] {
+    --w: calc(2 / 12);
+}
+
+[cols="3"] {
+    --w: calc(3 / 12);
+}
+
+[cols="4"] {
+    --w: calc(4 / 12);
+}
+
+[cols="5"] {
+    --w: calc(5 / 12);
+}
+
+[cols="6"] {
+    --w: calc(6 / 12);
+}
+
+[cols="7"] {
+    --w: calc(7 / 12);
+}
+
+[cols="8"] {
+    --w: calc(8 / 12);
+}
+
+[cols="9"] {
+    --w: calc(9 / 12);
+}
+
+[cols="10"] {
+    --w: calc(10 / 12);
+}
+
+[cols="11"] {
+    --w: calc(11 / 12);
+}
+
+[cols="12"] {
+    --w: calc(12 / 12);
+}
+
+/* Apply it */
+[cols],
+[sm] {
+    flex-basis: calc(var(--w, 1) * 100%);
+    max-width: calc(var(--w, 1) * 100%);
+}
+
+@media (min-width: 600px) {
+    [sm="1"] {
+        --w: calc(1 / 12);
+    }
+
+    [sm="2"] {
+        --w: calc(2 / 12);
+    }
+
+    [sm="3"] {
+        --w: calc(3 / 12);
+    }
+
+    [sm="4"] {
+        --w: calc(4 / 12);
+    }
+
+    [sm="5"] {
+        --w: calc(5 / 12);
+    }
+
+    [sm="6"] {
+        --w: calc(6 / 12);
+    }
+
+    [sm="7"] {
+        --w: calc(7 / 12);
+    }
+
+    [sm="8"] {
+        --w: calc(8 / 12);
+    }
+
+    [sm="9"] {
+        --w: calc(9 / 12);
+    }
+
+    [sm="10"] {
+        --w: calc(10 / 12);
+    }
+
+    [sm="11"] {
+        --w: calc(11 / 12);
+    }
+
+    [sm="12"] {
+        --w: calc(12 / 12);
+    }
+
+    /* Apply it */
+    [sm] {
+        flex-basis: calc(var(--w) * 100%);
+        max-width: calc(var(--w) * 100%);
+    }
+}
