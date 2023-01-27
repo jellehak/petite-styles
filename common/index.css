@@ -9,6 +9,7 @@
 @import url(./sizing.css);
 @import url(./display.css);
 @import url(./grid.css);
+@import url(./bg.css);
 
 /* TODO */
 [avatar] {
@@ -18,4 +19,11 @@
 [avatar] {
     height: 48px;
     width: 48px;
+}
+
+/* All element modifiers */
+* {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    margin: var(--margin);
 }
