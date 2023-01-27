@@ -1,5 +1,3 @@
-# Sailplane
-
 a lightweight CSS/UI Framework based on handy selectors and a sprinkle of JavaScript
 
 Designed to be:
