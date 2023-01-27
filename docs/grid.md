@@ -2,8 +2,19 @@
 
 <!-- docsify fix see https://github.com/docsifyjs/docsify/issues/1094 -->
 
+# Basic usage
+
+Use the `grid={n}` utilities to create grids with n equally sized columns.
+
 <v-preview>
-  <div grid="3">
+  <div grid="2" gap=small>
+    <v-card variant=outlined>column</v-card>
+    <v-card variant=outlined>column</v-card>
+  </div>
+</v-preview>
+
+<v-preview>
+  <div grid="3" gap=small>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
@@ -11,7 +22,7 @@
 </v-preview>
 
 <v-preview>
-  <div grid="4">
+  <div grid="4" gap=small>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
@@ -19,15 +30,17 @@
   </div>
 </v-preview>
 
-# Responsive
+# Breakpoints
+
+You can also use modifiers to target media queries for responsive breakpoints. For example, use `md:6` to apply the `6` utility at only medium screen sizes and above.
 
 > Resize screen to see changes
 
 <div>
 Current viewport:
- <span show=xs>
+ <!-- <span show=xs>
     extra small
-  </span>
+  </span> -->
  <span show=sm>
     small 
   </span>
@@ -37,13 +50,15 @@ Current viewport:
   <span show=lg>
     large
   </span>
-  <span show=xl>
+  <!-- <span show=xl>
     extra large
-  </span>
+  </span> -->
 </div>
 
 <v-preview>
-  <div grid="1" grid-sm="2" grid-md="4" gap=small>
+  <div grid="2 sm:4 md:6" gap=small>
+    <v-card variant=outlined>column</v-card>
+    <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>
     <v-card variant=outlined>column</v-card>

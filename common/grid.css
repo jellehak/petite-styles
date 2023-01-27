@@ -8,20 +8,23 @@ inspired by https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css
     display: grid;
 }
 
+[grid="1"]{
+    --grid: 1;
+}
 [grid="2"]{
-    grid-template-columns: auto auto;
+    --grid: 2;
 }
 [grid="3"]{
-    grid-template-columns: auto auto auto;
+    --grid: 3;
 }
 [grid="4"]{
-    grid-template-columns: auto auto auto auto;
+    --grid: 4;
 }
 [grid="5"]{
-    grid-template-columns: auto auto auto auto auto;
+    --grid: 5;
 }
 [grid="6"]{
-    grid-template-columns: auto auto auto auto auto auto;
+    --grid: 6;
 }
 
 /* Gap control */
@@ -38,32 +41,51 @@ inspired by https://cdn.jsdelivr.net/npm/vuetify@3.0.3/dist/vuetify.css
     grid-gap: var(--gap);
 }
 
-
-/* Responsive */
+/* Breakpoint modifiers */
 @media (min-width: 600px) {
     /* SM */
-    [grid-sm="2"]{
-        grid-template-columns: auto auto;
+    [grid*="sm:1"]{
+        --grid: 1;
     }
-    [grid-sm="3"]{
-        grid-template-columns: auto auto auto;
+    [grid*="sm:2"]{
+        --grid: 2;
     }
-    [grid-sm="4"]{
-        grid-template-columns: auto auto auto auto;
+    [grid*="sm:3"]{
+        --grid: 3;
     }
-    [grid-sm="5"]{
-        grid-template-columns: auto auto auto auto auto;
+    [grid*="sm:4"]{
+        --grid: 4;
     }
-    [grid-sm="6"]{
-        grid-template-columns: auto auto auto auto auto auto;
+    [grid*="sm:5"]{
+        --grid: 5;
+    }
+    [grid*="sm:6"]{
+        --grid: 6;
     }
 }
 @media (min-width: 960px) {
     /* MD */
+    [grid*="md:1"]{
+        --grid: 1;
+    }
+    [grid*="md:2"]{
+        --grid: 2;
+    }
+    [grid*="md:3"]{
+        --grid: 3;
+    }
+    [grid*="md:4"]{
+        --grid: 4;
+    }
+    [grid*="md:5"]{
+        --grid: 5;
+    }
+    [grid*="md:6"]{
+        --grid: 6;
+    }
 }
-@media (min-width: 1280px) {
-    /* LG */
-}
-@media (min-width: 1920px) {
-    /* XL */
+
+/* appliers */
+[grid]{
+    grid-template-columns: repeat(var(--grid),minmax(0,1fr));;
 }
